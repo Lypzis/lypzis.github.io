@@ -1,0 +1,28 @@
+@media only screen and (max-width: 1599px) {
+    
+    .modal__body--grid-of-02 {
+        margin-top: 1rem;
+        margin-bottom: 4.5rem;
+    }
+
+    p,
+    .label {
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (max-height: 768px) {
+    .modal__body--grid-of-02 {
+        grid-template-rows: 30.5rem;
+        margin-bottom: 4rem;
+    }
+}
+@media only screen and (max-height: 660px) {
+    .modal__body--grid-of-02 {
+        grid-template-rows: 21rem;
+    }
+
+    .overflow {
+        overflow: auto;
+    }
+}
+

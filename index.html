@@ -1,37 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lypzis | Where the code comes to life</title>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="css/favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="css/favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="css/favicons/favicon-16x16.png">
-	<link rel="manifest" href="css/favicons/site.webmanifest">
-	<link rel="mask-icon" href="css/favicons/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="css/favicons/favicon.ico">
-	<meta name="msapplication-TileColor" content="#00aba9">
-	<meta name="msapplication-config" content="css/favicons/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Evoloot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/queries.css">
+
+  <script type="text/javascript" src="vendor/webfontloader.js"></script>
+  <script type="text/javascript" src="vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="vendor/ramda.js"></script>
+  <script type="text/javascript" src="vendor/phaser-ce.min.js"></script>
+  <script type="text/javascript" src="vendor/asyncPath.js"></script>
 </head>
+
 <body>
-    
-    <header>
-        <h1>Nothing... yet!</h1>
-        <nav>
-            
-        </nav>
+
+  <script type="text/javascript" src="game.js"></script>
+
+  <!-- *************************************************************************** -->
+
+  <!-- The Modal 01-->
+  <div class="modal__background" id="id01">
+    <!-- Modal Content -->
+    <div class="modal__tv" id="opening">
+
+      <header class="modal__header">
+        <img src="assets/images/logo.png" alt="Evoloot Logo" class="logo">
+      </header>
+
+      <div class="modal__body">
+        <div class="video__row">
+          <video controls class="video">
+            <source src="./assets/video/sampleVideo2.mp4" type="video/mp4">
+            <!--<source src="./assets/video/sampleVideo2.ogg" type="video/ogg">-->
+            Your browser does not support the video tag.
+          </video>
+
+          <video controls class="video">
+            <source src="./assets/video/sampleVideo2.mp4" type="video/mp4">
+            <!--<source src="./assets/video/sampleVideo2.ogg" type="video/ogg">-->
+            Your browser does not support the video tag.
+          </video>
+
+          <video controls class="video">
+            <source src="./assets/video/sampleVideo2.mp4" type="video/mp4">
+            <!--<source src="./assets/video/sampleVideo2.ogg" type="video/ogg">-->
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <footer class="modal__footer">
+        <div class="button__row">
+          <button class="button" id="begin">
+            <img src="./assets/images/begin_journey.png" alt="Begin Journey" class="button__img">
+          </button>
+
+          <button class="button" id="login">
+            <img src="./assets/images/log_in.png" alt="Log In" class="button__img">
+          </button>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- NEXT -->
+
+
+  <div class="modal__background" id="id02">
+    <div class="modal__tv" id="register">
+
+      <form method="POST" action="#" class="">
+
+        <header class="modal__header">
+          <h1>CHARACTER SELECT</h1>
+        </header>
+
+        <div class="modal__body">
+          <div class="modal__body--grid-of-02 overflow">
+            <div class="modal__body--first-column">
+              <label for="username" class="label">Username</label>
+              <input type="text" name="username" id="username" placeholder="Your Username" autofocus required>
+
+              <div class="row__grid-of-02">
+                <div class="row__grid-of-02--first">
+                  <label for="firstName" class="label">First Name</label>
+                  <input type="text" name="firstName" id="firstName" placeholder="Your First Name" required>
+                </div>
+                <div class="row__grid-of-02--last">
+                  <label for="lastName" class="label">Last Name</label>
+                  <input type="text" name="lastName" id="lastName" placeholder="Your Last Name" required>
+                </div>
+              </div>
+
+              <div class="date">
+                <label for="birthday" class="label">Date of Birth</label>
+                <input type="date" name="birthday" id="birthday" placeholder="Your Birthday" required>
+              </div>
+
+              <div class="row__grid-of-02">
+                <div class="row__grid-of-02--first">
+                  <label for="city" class="label">City</label>
+                  <input type="text" name="city" id="city" placeholder="Your City" required>
+                </div>
+                <div class="row__grid-of-02--last">
+                  <label for="province" class="label">Province</label>
+                  <input type="text" name="province" id="province" placeholder="Your Province" required>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="modal__body--second-column">
+
+              <label for="email" class="label">E-mail</label>
+              <input type="email" name="email" id="email" placeholder="Your E-mail" required>
+
+              <label for="confirmEmail" class="label">Confirm E-mail</label>
+              <input type="email" name="confirmEmail" id="confirmEmail" placeholder="Confirm your E-mail" required>
+
+              <label for="password" class="label">Password</label>
+              <input type="password" name="password" id="password" placeholder="Your Password" required>
+
+              <label for="confirmPassword" class="label">Confirm Password</label>
+              <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your Password"
+                required>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal__footer">
+          <div class="button__row">
+            <button class="button" id="back">
+              <img src="./assets/images/back.png" alt="back">
+            </button>
+
+            <button type="submit" class="button">
+              <img src="./assets/images/continue.png" alt="continue">
+            </button>
+          </div>
+        </footer>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="modal__background modal__background--popup" id="id03">
+    <div class="modal__popup">
+
+      <div class="modal__body" id="enter-question">
+        <!-- <p id='question-text'> Enter Forum? </p> -->
+      </div>
+
+      <footer class="modal__footer">
+        <a class="button" href="#" id="yes">Yes</a>
+
+        <a class="button" href="#" id="no">No</a>
+      </footer>
+
+    </div>
+  </div>
+
+  <div class="modal__full overflow" id="id04">
+    <header class="modal__header">
+      <div class="modal__header--grid-of-02">
+        <div>
+          <img src="./assets/images/logo.png" alt="Evoloot Logo" class="logo--small">
+        </div>
+
+        <div>
+          <a class="button" href="#" id="quick-selection">Quick Select Options</a>
+          <ul class="main-options">
+
+            <li>
+              <a id="test">test</a>
+            </li>
+            <li>
+              <a id="close-modal">close</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h1>Forums</h1>
+      </div>
     </header>
 
-    <section>
+    <section class="modal__body--footless overflow border">
+
+      <div class="modal__body--grid-of-03">
+        <div>
+          <ion-icon></ion-icon>
+          <h2>
+            <a href="#" id="sub-category01">Sub-Category 1</a>
+          </h2>
+          <p>description</p>
+        </div>
+        <div>
+          <ion-icon></ion-icon>
+          <h2>
+            <a href="#" id="sub-category02">Sub-Category 2</a>
+          </h2>
+          <p>description</p>
+        </div>
+        <div>
+          <ion-icon></ion-icon>
+          <h2>
+            <a href="#" id="sub-category03">Sub-Category 3</a>
+          </h2>
+          <p>description</p>
+        </div>
+
+        <div>
+          <ion-icon></ion-icon>
+          <h2>
+            <a href="#" id="sub-category04">Sub-Category 4</a>
+          </h2>
+          <p>description</p>
+        </div>
+        <div>
+          <ion-icon></ion-icon>
+          <h2>
+            <a href="#" id="sub-category05">Sub-Category 5</a>
+          </h2>
+          <p>description</p>
+        </div>
+        <div>
+          <ion-icon></ion-icon>
+          <h2>
+            <a href="#" id="sub-category06">Sub-Category 6</a>
+          </h2>
+          <p>description</p>
+        </div>
+
+        <div>
+          <ion-icon></ion-icon>
+          <h2>
+            <a href="#" id="sub-category07">Sub-Category 7</a>
+          </h2>
+          <p>description</p>
+        </div>
+        <div>
+          <ion-icon></ion-icon>
+          <h2>
+            <a href="#" id="sub-category08">Sub-Category 8</a>
+          </h2>
+          <p>description</p>
+        </div>
+        <div>
+          <ion-icon></ion-icon>
+          <h2>
+            <a href="#" id="sub-category09">Sub-Category 9</a>
+          </h2>
+          <p>description</p>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="modal__full overflow" id="id05">
+    <header class="modal__header">
+      <div class="modal__header--grid-of-02">
+        <div>
+          <img src="./assets/images/logo.png" alt="Evoloot Logo" class="logo--small">
+        </div>
+
+        <div>
+          <a class="button" href="#" id="quick-selection02">Quick Select Options</a>
+          <ul class="main-options">
+
+            <li>
+              <a id="test">test</a>
+            </li>
+            <li>
+              <a id="close-modal02">close</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h1>Forums</h1>
+      </div>
+    </header>
+
+    <section class="modal__body--footless overflow border">
+
+      <div class="modal__body--grid-of-04">
+        <div class="modal__body--first-column align-right">
+          <div class="text">
+            <p>Sort Option:</p>
+          </div>
+        </div>
+        <div class="modal__body--second-column align-left">
+          <select>
+            <option value="newest">Newest</option>
+            <option value="score">Score</option>
+            <option value="activity">Activity</option>
+          </select>
+        </div>
+        <div class="modal__body--third-column">
+          <input type="text" placeholder="Search.." class="search">
+        </div>
+        <div class="modal__body--fourth-column">
+          <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+
+      <div class="row categories">
+        <ul id="forumThreads">
+          <li>
+            <div class="row__grid-of-02">
+              <div class="row__grid-of-02--first">
+                <div class="row__grid-of-02">
+                  <div class="row__grid-of-02--first">
+                    <img src="" alt="User Avatar">
+                  </div>
+                  <div class="row__grid-of-02--second">
+                    <h3>A Thread Title</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row__grid-of-02--second">
+                <div class="row__grid-of-04">
+                  <div class="row__grid-of-04--first">
+                    <img src="" alt="Post Creator Avatar">
+                  </div>
+                  <div class="row__grid-of-04--second">
+                    <h3>Username</h3>
+                  </div>
+                  <div class="row__grid-of-04--third">
+                    <h3>Score</h3>
+                  </div>
+                  <div class="row__grid-of-04--fourth">
+                    <h3>Comments</h3>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!--
+          <li>
+            <div class="col span-1-of-2 box">
+              <div class="col span-1-of-2">
+                <img src="" alt="User Avatar">
+              </div>
+              <div class="col span-1-of-2">
+                <h3>A Thread Title</h3>
+              </div>
+            </div>
+
+            <div class="col span-1-of-2 box">
+              <div class="col span-1-of-4">
+                <img src="" alt="Post Creator Avatar">
+              </div>
+              <div class="col span-1-of-4">
+                <h3>Username</h3>
+              </div>
+              <div class="col span-1-of-4">
+                <h3>Score</h3>
+              </div>
+              <div class="col span-1-of-4">
+                <h3>Comments</h3>
+              </div>
+            </div>
+          </li> -->
+
+        </ul>
+      </div>
 
     </section>
 
-    <footer>
+  </div>
 
-    </footer>
+
 
 </body>
+
 </html>

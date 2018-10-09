@@ -1,0 +1,319 @@
+/**********************************************
+* BASIC SETUP
+***********************************************/
+
+/* Colors
+#21c900,
+#fff600,
+#0060ff,
+#00fcff,
+#ffb400,
+#6d4500,
+#f8f8f8,
+#868686
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit; 
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ffff;
+  font-family: 'Fixedsyswoff', sans-serif;
+  font-weight: 300; /* default font weight use */
+  font-size: 2rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.overflow {
+  overflow: none;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after { /* clear the float after an element */
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/************************************************
+* MODAL
+*************************************************/ 
+/* --------- Modal Background ------------- */
+.modal__background {
+  position: fixed;
+  display: none;
+	width: 100%;
+  height: 100%;
+	z-index: 1000;
+	background: rgba(255, 255, 255, 0.47);
+ }
+
+ .modal__background--popup {
+	background: rgba(0, 0, 0, 0.7);
+ }
+
+/* --------- Modal Content/Box ------------- */
+.modal__tv {
+  background-image: url(../assets/images/TV_BG.png);
+  background-color: #fefefe;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2000;
+  width: 100vh; /* Could be more or less, depending on screen size padding: 5% 50px; */
+  height: 75vh;
+  padding: 5%;
+  text-align: center;
+}
+
+.modal__header {
+  position: relative;
+  height: 30%;
+}
+
+.modal__header--grid-of-02 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.modal__body {
+  position: relative;
+  height: 50%;
+}
+
+.modal__body--footless {
+  position: relative;
+  height: 65%;
+}
+
+.modal__body--grid-of-02 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 36rem;
+  margin: 2.5rem 0;
+}
+
+.modal__body--grid-of-04 {
+  display: grid;
+  grid-template-columns: 20% 35% 40% 2%;
+  grid-template-rows: 5rem;
+  margin: 2.5rem 0;
+}
+
+.modal__body--grid-of-03 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 15rem 15rem 15rem;
+  margin: 2.5rem 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.modal__footer {
+  position: relative;
+  height: 20%;
+}
+
+.modal__popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+ }
+
+ .modal__full{
+  display: none;
+	position: fixed;
+	width: 100%;
+  height: 100%;
+  padding: 3% 6%;
+	z-index: 1000;
+  background: #fff;
+  text-align: center;
+ }
+
+/**********************************************
+* OPENING
+***********************************************/
+/* ---------- Logo ----------- */
+.logo {
+  position: absolute;
+  left: 50%;
+  width: 85%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+} 
+
+.logo--small {
+  width: 50%;
+}
+
+/* ---------- Video ----------- */
+.video__row {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: 1rem;
+}
+
+.video {
+  display: inline-block;
+  margin: 0 3%;
+  padding: .4rem;
+  width: 22%;
+  background-image: url(../assets/images/video_button.png);
+  background-size: 100% 100%;
+}
+
+/* ------------ Button -------------- */
+.button__row {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  margin: 0 4%;
+  width: 35%;
+  height: auto;
+}
+
+.button__img {
+  width: 100%;
+}
+
+/* ----------- Text ---------- */
+h1 {
+  font-size: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: linear-gradient(#00fcff,#0060ff); /*#013077*/
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: .1rem;
+}
+
+p,
+.label {
+  font-size: 2.2rem;
+  background: linear-gradient(#fff600,#21c900);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: .2px;
+}
+
+/* ------------- Grid ------------ */
+
+.row__grid-of-02 {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.row__grid-of-02--last {
+  margin-bottom: 4%;
+}
+
+.row__grid-of-04 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+/* ------------- Inputs ---------------------*/
+input[type=text], /* specify the input type that we want the change to happen */
+input[type=email], 
+input[type=password], 
+input[type=date] {
+  width: 90%;
+  padding: .7rem;
+  border-radius: .6rem;
+  margin-bottom: 4%;
+  margin-left: 5%;
+  border: none;
+  background: -webkit-gradient(linear,left top, left bottom,from(#f8f8f8),to(#868686));
+  background: linear-gradient(#f8f8f8,#868686);
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+input[type=text]:visited,
+input[type=email]:visited, 
+input[type=password]:visited, 
+input[type=date]:visited {
+  background: -webkit-gradient(linear,left top, left bottom,from(#f8f8f8),to(#868686));
+  background: linear-gradient(#f8f8f8,#868686)
+}
+
+input[type=text]:focus,
+input[type=email]:focus, 
+input[type=password]:focus, 
+input[type=date]:focus {
+  background: -webkit-gradient(linear,left top, left bottom,from(#ffb400),to(#6d4500));
+  background: linear-gradient(#ffb400,#6d4500);
+}
+
+.border {
+  border:  .1rem solid black ;
+  border-radius: 1rem;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* ---------------- Continue here ------------- */
