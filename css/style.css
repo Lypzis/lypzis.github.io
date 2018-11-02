@@ -1,0 +1,116 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(12rem);
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.heading-primary {
+  color: #fff;
+  /* hack to correct minor "shake" bug(?) in animations */
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 0.27rem;
+  animation: moveInLeft 1.5s ease-out;
+}
+.heading-primary--sub {
+  backface-visibility: hidden;
+  display: block;
+  font-size: 3rem;
+  letter-spacing: 1.8rem;
+  animation: fadeInRight 3s ease-out;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(../img/Castle-bg.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh);
+  clip-path: polygon(0px 0px, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh);
+  position: relative;
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo {
+  height: 6rem;
+  animation: fadeIn 3.5s ease-in;
+}
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
