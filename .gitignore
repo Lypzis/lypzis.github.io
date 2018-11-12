@@ -1,5 +1,2 @@
 node_modules/
-sass/
-package.json
 yarn.lock
-.gitignore
