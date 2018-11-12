@@ -16,9 +16,9 @@ body {
     
     &--main {
         display: block;
-        font-size: 6rem;
+        font-size: 7rem;
         font-weight: 400;
-        letter-spacing: .27rem;
+        letter-spacing: .4rem;
     
         animation: moveInLeft 1.5s ease-out;
     } 
@@ -26,8 +26,8 @@ body {
     &--sub {
         backface-visibility: hidden;
         display: block;
-        font-size: 3rem;
-        letter-spacing: 1.8rem;
+        font-size: 3.5rem;
+        letter-spacing: .6rem;
 
         animation: fadeInRight 3s ease-out;
     }
