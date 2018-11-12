@@ -57,7 +57,7 @@ body {
 }
 .heading-primary--main {
   display: block;
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 400;
   letter-spacing: 0.4rem;
   animation: moveInLeft 1.5s ease-out;
@@ -65,7 +65,7 @@ body {
 .heading-primary--sub {
   backface-visibility: hidden;
   display: block;
-  font-size: 3.5rem;
+  font-size: 3rem;
   letter-spacing: 0.6rem;
   animation: fadeInRight 3s ease-out;
 }

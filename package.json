@@ -4,7 +4,7 @@
   "description": "Lypzis personal portfolio webpage.",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"livereload -p 4000\" \"sass --watch ./sass/main.scss ./css/style.css\" --kill-others",
+    "start": "concurrently \"livereload -p 4000 -o 1\" \"sass --watch ./sass/main.scss ./css/style.css\" --kill-others",
     "livereload": "livereload -p 4000",
     "compile:sass": "sass --watch ./sass/main.scss ./css/style.css"
   },
