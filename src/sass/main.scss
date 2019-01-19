@@ -6,7 +6,9 @@
 @import './base/base';
 
 @import './layout/header';
+@import './layout/grid';
 
-@import './components/buttons.scss';
+@import './components/buttons';
+@import './components/about';
 
 @import './pages/home';

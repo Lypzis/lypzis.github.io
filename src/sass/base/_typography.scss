@@ -33,8 +33,14 @@ body {
     }
 }
 
-.text {
-    
-    font-family: $text;
+.title {
+    font-size: 4rem;
+    text-align: center;
+}
 
+.text {
+    font-family: $text;
+    hyphens: auto;
+    text-align: justify;
+    font-size: 2.2rem;
 }
