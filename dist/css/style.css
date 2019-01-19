@@ -42,6 +42,31 @@
     opacity: 1;
   }
 }
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 2rem);
+  }
+  80% {
+    opacity: 0.4;
+    left: 50%;
+    transform: translate(-50%, 1rem);
+  }
+  90% {
+    opacity: 0.7;
+    left: 50%;
+    transform: translate(-50%, -1rem);
+  }
+  100% {
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
 body {
   font-family: "Pacifico", cursive;
   font-weight: 400;
@@ -68,6 +93,10 @@ body {
   font-size: 3rem;
   letter-spacing: 0.6rem;
   animation: fadeInRight 3s ease-out;
+}
+
+.text {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 *,
@@ -104,7 +133,7 @@ body {
 }
 .header__logo {
   height: 6rem;
-  animation: fadeIn 3.5s ease-in;
+  animation: fadeIn 4.5s ease-in;
 }
 .header__text-box {
   position: absolute;
@@ -112,6 +141,72 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.button {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 1rem 4rem;
+  display: inline-block;
+  transition: all 0.2s;
+  backface-visibility: hidden;
+}
+.button, .button:link, .button:visited {
+  font-size: 2rem;
+  text-decoration: none;
+}
+.button:hover {
+  box-shadow: 0 1rem 0.7rem rgba(0, 0, 0, 0.4);
+  transform: translate(-50%, -1rem);
+  left: 50%;
+}
+.button:hover::after {
+  transform: scaleX(1.7) scaleY(1.9);
+  opacity: 0;
+}
+.button__section {
+  position: absolute;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 1.5rem;
+}
+.button__section:active, .button__section:focus {
+  left: 50%;
+  transform: translate(-50%, 0.05rem);
+  box-shadow: 0 0.5rem 0.2rem rgba(0, 0, 0, 0.8);
+  /* nice shadow is lowered to cause the impression of pressing */
+}
+.button__section-text {
+  outline: none;
+  font-weight: 400;
+  text-decoration: none;
+  color: #6e6e6e;
+}
+.button__section::after {
+  background: #fff;
+}
+.button::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.button-animated {
+  animation: fadeInBottom 4s ease-out;
+}
+
+.section-about {
+  margin-top: -8vh;
+  padding: 25rem 0;
+  background: #f7f7f7;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -52,3 +52,33 @@
         opacity: 1; 
     }
 }
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+        left: 50%;
+        transform: translate(-50%, 2rem);
+    }
+
+    80% {
+        opacity: .4;
+        left: 50%;
+        transform: translate(-50%, 1rem);
+    }
+
+    90% {
+        opacity: .7;
+        left: 50%;
+        transform: translate(-50%, -1rem);
+    }
+
+    100% {
+        opacity: 1;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
