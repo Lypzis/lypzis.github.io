@@ -98,6 +98,7 @@ body {
 .title {
   font-size: 4rem;
   text-align: center;
+  text-shadow: 0 0.3rem 0.2rem rgba(0, 0, 0, 0.2);
 }
 
 .text {
@@ -190,7 +191,6 @@ body {
 
 .button {
   cursor: pointer;
-  text-transform: uppercase;
   padding: 1rem 4rem;
   display: inline-block;
   transition: all 0.2s;
@@ -260,19 +260,33 @@ body {
   float: left;
   width: 24%;
   margin-right: 3%;
-  shape-outside: square;
+  text-align: center;
 }
 .about__picture-photo {
   border-radius: 3rem;
   border: 1rem ridge;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
 }
 .about__picture-name {
-  text-align: center;
+  display: block;
+  text-decoration: none;
   font-size: 1.8rem;
-  border-bottom: solid;
+  border: solid;
   width: 60%;
+  color: #6e6e6e;
+  border-radius: 1rem;
+  padding: 0.4rem 1rem;
   margin: 0 auto;
+  backface-visibility: hidden;
+  transition: all 0.4s;
+}
+.about__picture-name:hover, .about__picture-name:active, .about__picture-name:focus {
+  background: #000;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0.4rem 0.2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.2rem);
 }
 .about__description {
   float: left;
