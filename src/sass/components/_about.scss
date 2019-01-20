@@ -10,20 +10,37 @@
         float: left;
         width: 24%;
         margin-right: 3%;
-        shape-outside: square;
+        text-align: center;
 
         &-photo {
             border-radius: 3rem;
             border: 1rem ridge;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 .3rem .3rem rgba($color-dark, .3);
         }
 
         &-name{
-            text-align: center;
+            display: block;
+            text-decoration: none;
             font-size: 1.8rem;
-            border-bottom: solid;
+            border: solid;
             width: 60%;
-            margin: 0 auto;
+            color: $color-gray;
+            border-radius: 1rem;
+            padding: .4rem 1rem;
+            margin: 0 auto; 
+            backface-visibility: hidden;
+            transition: all .4s;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background: $color-dark;
+                color: $color-white;
+                border: none;
+                box-shadow: 0 .4rem .2rem rgba($color-dark, .3);
+                transform: translateY(-.2rem);
+            }
         }
     }
 
