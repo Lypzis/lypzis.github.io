@@ -12,14 +12,13 @@
         text-decoration: none;
     }
 
-    
-
     &:hover {
         box-shadow: 0 1rem .7rem rgba($color-dark, .4);
         transform: translate(-50%, -1rem);
         left: 50%;
 
         &::after {
+            background: $color-white;
             transform: scaleX(1.7) scaleY(1.9);
             opacity: 0;
         }
@@ -32,6 +31,19 @@
         transform: translateX(-50%);
         left: 50%;
         border-radius: 1.5rem;
+
+        &::after  {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 1.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s;
+        }
 
         &:active,
         &:focus {
@@ -46,26 +58,19 @@
             text-decoration: none;
             color: $color-gray;
         }
-
-        &::after {
-            background: $color-white;
-        }
-    }
-
-    &::after  {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 1.5rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all 0.4s;
     }
 
     &-animated {
         animation: fadeInBottom 4s ease-out;
+    }
+
+    &-label-icon {
+        width: 50%;
+        background: orangered;
+    }
+
+    &-image {
+        width: 50%;
+        background: orangered;
     }
 }

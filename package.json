@@ -4,8 +4,8 @@
   "description": "Lypzis personal portfolio webpage.",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"livereload -p 4000 -o 1\" \"sass --watch ./src/sass/main.scss ./dist/css/style.css\" --kill-others",
-    "livereload": "livereload -p 4000",
+    "start": "concurrently \"livereload -p 4001 -o 1\" \"sass --watch ./src/sass/main.scss ./dist/css/style.css\" --kill-others",
+    "livereload": "livereload -p 4001",
     "compile:sass": "sass --watch ./src/sass/main.scss ./dist/css/style.css"
   },
   "license": "MIT",
