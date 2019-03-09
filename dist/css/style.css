@@ -205,23 +205,34 @@ body {
   font-size: 2rem;
   text-decoration: none;
 }
-.button:hover {
+.button__section {
+  position: absolute;
+  background: #fff;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 1.5rem;
+}
+.button__section-text {
+  outline: none;
+  font-weight: 600;
+  text-decoration: none;
+  color: #6e6e6e;
+}
+.button__section:hover {
   box-shadow: 0 1rem 0.7rem rgba(0, 0, 0, 0.4);
   transform: translate(-50%, -1rem);
   left: 50%;
 }
-.button:hover::after {
+.button__section:hover::after {
   background: #fff;
   transform: scaleX(1.7) scaleY(1.9);
   opacity: 0;
 }
-.button__section {
-  position: absolute;
-  background: #fff;
+.button__section:active, .button__section:focus {
   left: 50%;
-  transform: translateX(-50%);
-  left: 50%;
-  border-radius: 1.5rem;
+  transform: translate(-50%, 0.05rem);
+  box-shadow: 0 0.5rem 0.2rem rgba(0, 0, 0, 0.8);
+  /* nice shadow is lowered to cause the impression of pressing */
 }
 .button__section::after {
   content: "";
@@ -235,24 +246,24 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
-.button__section:active, .button__section:focus {
-  left: 50%;
-  transform: translate(-50%, 0.05rem);
-  box-shadow: 0 0.5rem 0.2rem rgba(0, 0, 0, 0.8);
-  /* nice shadow is lowered to cause the impression of pressing */
-}
-.button__section-text {
-  outline: none;
-  font-weight: 600;
-  text-decoration: none;
-  color: #6e6e6e;
-}
 .button-animated {
   animation: fadeInBottom 4s ease-out;
 }
 .button-label-icon {
-  width: 50%;
-  background: orangered;
+  width: 100%;
+  background: #fff;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+.button-label-icon i {
+  color: #6e6e6e;
+  font-size: 15rem;
+  margin: 0 auto;
+  padding: 3rem 4rem;
+}
+.button-label-icon:hover {
+  box-shadow: 0 1rem 0.7rem rgba(0, 0, 0, 0.4);
+  transform: translateY(-1rem);
 }
 .button-image {
   width: 50%;
@@ -268,12 +279,15 @@ body {
   margin: 0 auto;
 }
 .about__picture {
+  position: relative;
   float: left;
-  width: 24%;
-  margin-right: 3%;
+  width: 28rem;
+  height: 35rem;
+  margin: 0 5rem 0 15rem;
   text-align: center;
 }
 .about__picture-photo {
+  width: 100%;
   border-radius: 3rem;
   border: 1rem ridge;
   margin-bottom: 2rem;
@@ -300,23 +314,32 @@ body {
   transform: translateY(-0.2rem);
 }
 .about__description {
-  float: left;
-  width: 65%;
-  column-count: 2;
-  column-gap: 5rem;
-  column-rule: 0.2rem solid #6e6e6e;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .work {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)), url(../img/Castle-bg.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)), url(../img/OpenBook.jpg);
   background-size: cover;
   background-position: top;
   height: 100vh;
-  padding-top: 10rem;
+  padding-top: 15rem;
   position: relative;
   background-attachment: fixed;
   -webkit-clip-path: polygon(0px 0px, 50% 5rem, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh);
-  clip-path: polygon(0px 0px, 50% 5rem, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh);
+  clip-path: polygon(0px 0px, 50% 5rem, 100% 0px, 100% 95vh, 50% 100%, 0px 95vh);
+}
+.work__box {
+  position: relative;
+}
+
+.input__invisible {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .section-about {
@@ -327,7 +350,7 @@ body {
 
 .section-work {
   padding: 0;
-  margin-top: -30vh;
+  margin-top: -20vh;
 }
 
 /*# sourceMappingURL=style.css.map */

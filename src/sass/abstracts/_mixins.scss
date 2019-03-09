@@ -5,3 +5,13 @@
         clear: both;
     }
 }
+
+// make a checkbox or radiobox input "invisible"
+@mixin invisibleElement {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}

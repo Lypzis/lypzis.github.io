@@ -7,12 +7,15 @@
     margin: 0 auto;
 
     &__picture {
+        position: relative;
         float: left;
-        width: 24%;
-        margin-right: 3%;
+        width: 28rem;
+        height: 35rem;
+        margin: 0 5rem 0 15rem;
         text-align: center;
 
         &-photo {
+            width: 100%;
             border-radius: 3rem;
             border: 1rem ridge;
             margin-bottom: 2rem;
@@ -45,10 +48,7 @@
     }
 
     &__description {
-        float: left;
-        width: 65%;
-        column-count: 2;
-        column-gap: 5rem;
-        column-rule: .2rem solid $color-gray;
+        width: 80%;
+        margin: 0 auto;
     }
 }

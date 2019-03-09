@@ -12,25 +12,38 @@
         text-decoration: none;
     }
 
-    &:hover {
-        box-shadow: 0 1rem .7rem rgba($color-dark, .4);
-        transform: translate(-50%, -1rem);
-        left: 50%;
-
-        &::after {
-            background: $color-white;
-            transform: scaleX(1.7) scaleY(1.9);
-            opacity: 0;
-        }
-    }
-
     &__section {
         position: absolute;
         background: $color-white;
-        left: 50%;
         transform: translateX(-50%);
         left: 50%;
         border-radius: 1.5rem;
+
+         &-text {
+            outline: none;
+            font-weight: 600;
+            text-decoration: none;
+            color: $color-gray;
+        }
+
+        &:hover {
+            box-shadow: 0 1rem .7rem rgba($color-dark, .4);
+            transform: translate(-50%, -1rem);
+            left: 50%;
+    
+            &::after {
+                background: $color-white;
+                transform: scaleX(1.7) scaleY(1.9);
+                opacity: 0;
+            }
+        }
+
+        &:active,
+        &:focus {
+            left: 50%;
+            transform: translate(-50%, .05rem);
+            box-shadow: 0 .5rem .2rem rgba($color-dark, .8); /* nice shadow is lowered to cause the impression of pressing */
+        }
 
         &::after  {
             content: "";
@@ -44,20 +57,6 @@
             z-index: -1;
             transition: all 0.4s;
         }
-
-        &:active,
-        &:focus {
-            left: 50%;
-            transform: translate(-50%, .05rem);
-            box-shadow: 0 .5rem .2rem rgba($color-dark, .8); /* nice shadow is lowered to cause the impression of pressing */
-        }
-
-        &-text {
-            outline: none;
-            font-weight: 600;
-            text-decoration: none;
-            color: $color-gray;
-        }
     }
 
     &-animated {
@@ -65,8 +64,22 @@
     }
 
     &-label-icon {
-        width: 50%;
-        background: orangered;
+        width: 100%;
+        background: $color-white;
+        border-radius: 1.5rem;
+        text-align: center;
+
+        i {
+            color: $color-gray;
+            font-size: 15rem;
+            margin: 0 auto;
+            padding: 3rem 4rem;
+        }
+
+        &:hover {
+            box-shadow: 0 1rem .7rem rgba($color-dark, .4);
+            transform: translateY(-1rem);
+        }
     }
 
     &-image {
