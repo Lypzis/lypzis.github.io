@@ -7,9 +7,9 @@
     "start": "npm-run-all --parallel devServer watch",
     "devServer": "live-server",
     "watch": "sass --watch ./src/sass/main.scss ./dist/css/style.css",
-    "compile": "sass ./src/sass/main.scss ./dist/css/style.css",
-    "prefix": "postcss --use autoprefixer -b 'last 10 versions' ./css/style.css -o ./css/style.css",
-    "compress": "sass ./dist/css/style.css --style compressed",
+    "compile": "sass ./src/sass/main.scss ./dist/css/style.comp.css",
+    "prefix": "postcss --use autoprefixer -b 'last 5 versions' ./dist/css/style.comp.css -o ./dist/css/style.prefix.css",
+    "compress": "sass ./dist/css/style.prefix.css ./dist/css/style.css --style compressed",
     "build": "npm-run-all compile prefix compress"
   },
   "license": "MIT",
