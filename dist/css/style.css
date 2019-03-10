@@ -203,7 +203,6 @@ body {
 }
 .button, .button:link, .button:visited {
   font-size: 2rem;
-  text-decoration: none;
 }
 .button__section {
   position: absolute;
@@ -211,24 +210,22 @@ body {
   transform: translateX(-50%);
   left: 50%;
   border-radius: 1.5rem;
-}
-.button__section-text {
   outline: none;
   font-weight: 600;
   text-decoration: none;
   color: #6e6e6e;
 }
-.button__section:hover {
+.button__section:hover, .button__section:focus {
   box-shadow: 0 1rem 0.7rem rgba(0, 0, 0, 0.4);
   transform: translate(-50%, -1rem);
   left: 50%;
 }
-.button__section:hover::after {
+.button__section:hover::after, .button__section:focus::after {
   background: #fff;
   transform: scaleX(1.7) scaleY(1.9);
   opacity: 0;
 }
-.button__section:active, .button__section:focus {
+.button__section:active {
   left: 50%;
   transform: translate(-50%, 0.05rem);
   box-shadow: 0 0.5rem 0.2rem rgba(0, 0, 0, 0.8);
@@ -249,25 +246,25 @@ body {
 .button-animated {
   animation: fadeInBottom 4s ease-out;
 }
-.button-label-icon {
+.button-label {
+  margin-top: 2rem;
   width: 100%;
   background: #fff;
   border-radius: 1.5rem;
   text-align: center;
 }
-.button-label-icon i {
+.button-label-logo {
+  width: 100%;
+}
+.button-label i, .button-label-logo {
   color: #6e6e6e;
   font-size: 15rem;
   margin: 0 auto;
   padding: 3rem 4rem;
 }
-.button-label-icon:hover {
+.button-label:hover, .button-label:focus {
   box-shadow: 0 1rem 0.7rem rgba(0, 0, 0, 0.4);
   transform: translateY(-1rem);
-}
-.button-image {
-  width: 50%;
-  background: orangered;
 }
 
 .about {
@@ -306,7 +303,7 @@ body {
   backface-visibility: hidden;
   transition: all 0.4s;
 }
-.about__picture-name:hover, .about__picture-name:active, .about__picture-name:focus {
+.about__picture-name:hover, .about__picture-name:focus {
   background: #000;
   color: #fff;
   border: none;
@@ -331,6 +328,15 @@ body {
 }
 .work__box {
   position: relative;
+}
+.work__box-1 {
+  top: -3rem;
+}
+.work__box-2 {
+  top: 3rem;
+}
+.work__box-3 {
+  top: -3rem;
 }
 
 .input__invisible {
