@@ -15,3 +15,14 @@
     position: absolute;
     z-index: -1;
 }
+
+@mixin buttonIconWhiteToBlack {
+    background: $color-dark;
+    box-shadow: 0 1rem .7rem rgba($color-dark, .4);
+    transform: translateY(-1rem);
+    border: solid .5rem $color-white;
+
+    i {
+        color: $color-white;
+    }
+}
