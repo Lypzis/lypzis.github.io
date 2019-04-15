@@ -6,7 +6,7 @@
     padding: 11rem;
     position: relative;
     background-attachment: fixed;
-    -webkit-clip-path: polygon(0px 0px, 50% 5rem, 100% 0px, 100% 95vh, 50% 100%, 0px 95vh);
+    -webkit-clip-path: polygon(0px 0px, 50% 5vh, 100% 0px, 100% 95vh, 50% 100%, 0px 95vh);
     clip-path: polygon(0 0, 50% 5rem, 100% 0, 100% 95vh, 50% 100%, 0 95vh);
 
     &__box {
