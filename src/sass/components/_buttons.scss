@@ -64,6 +64,7 @@
         width: 100%;
         background: $color-white;
         border-radius: 1.5rem;
+        border: solid .5rem transparent;
         text-align: center;
         transition: all .5s;
 
@@ -81,6 +82,24 @@
 
         &:focus {
             @include buttonIconWhiteToBlack;
+        }
+    }
+
+    &-name{
+        display: block;
+        text-decoration: none;
+        outline: none;
+        font-size: 1.8rem;
+        border: solid .2rem;
+        color: $color-gray;
+        border-radius: 1rem;
+        padding: .4rem 1rem;
+        backface-visibility: hidden;
+        transition: all .4s;
+
+        &:hover,
+        &:focus {
+            @include buttonNameWhiteToBlack;
         }
     }
 }

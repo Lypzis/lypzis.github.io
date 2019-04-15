@@ -3,7 +3,6 @@
     height: 70rem;
     width: 80%;
     color: $color-gray;
-    padding: 2.5rem 5rem;
     margin: 0 auto;
 
     &__picture {
@@ -20,29 +19,6 @@
             border: 1rem ridge;
             margin-bottom: 2rem;
             box-shadow: 0 .3rem .3rem rgba($color-dark, .3);
-        }
-
-        &-name{
-            display: block;
-            text-decoration: none;
-            font-size: 1.8rem;
-            border: solid;
-            width: 60%;
-            color: $color-gray;
-            border-radius: 1rem;
-            padding: .4rem 1rem;
-            margin: 0 auto; 
-            backface-visibility: hidden;
-            transition: all .4s;
-
-            &:hover,
-            &:focus {
-                background: $color-dark;
-                color: $color-white;
-                border: none;
-                box-shadow: 0 .4rem .2rem rgba($color-dark, .3);
-                transform: translateY(-.2rem);
-            }
         }
     }
 
