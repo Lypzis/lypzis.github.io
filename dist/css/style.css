@@ -194,6 +194,15 @@ body {
   width: calc(3 * ((100% - 3 * 6rem) / 4) + (2 * 6rem));
 }
 
+.footer {
+  background: #000;
+  padding: 1rem;
+}
+.footer p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
 .button {
   cursor: pointer;
   padding: 1rem 4rem;
