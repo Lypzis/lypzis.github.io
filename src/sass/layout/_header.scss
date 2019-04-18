@@ -15,10 +15,16 @@
     }
 
     &__logo {
+        opacity: 1;
         height: 6rem;
+        transition: all 2s ease-in 3s;
 
         animation: fadeIn 4.5s ease-in;
     }
+
+    &__logo-box:hover &__logo {
+        opacity: 0;
+     } 
 
     &__text-box {
         position: absolute; 

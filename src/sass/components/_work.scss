@@ -39,9 +39,12 @@
             border-bottom: solid .2rem $color-white;
         }
 
-        &:hover .button-label,
-        .input__invisible:focus + .button-label {
+        &:hover .button-label {
             @include buttonIconWhiteToBlack;
         }
+        /*
+        .input__invisible:focus + .button-label {
+            @include buttonIconWhiteToBlack;
+        } */
     }
 }

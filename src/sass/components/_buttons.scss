@@ -102,4 +102,60 @@
             @include buttonNameWhiteToBlack;
         }
     }
+
+    &__link:visited,
+    &__link:link {
+        &:not(:last-child) {
+            margin-right: 7rem;
+        }
+        
+        position: relative;
+        margin-right: 3rem;
+        padding: .2rem;
+        font-size: 2.1rem;
+        outline: none;
+        text-decoration: none;
+        color: $color-gray;
+        border-bottom: solid transparent .2rem;
+        transition: all .3s;
+
+        span {
+            position: absolute;
+            right: -2.5rem;
+            transition: inherit;
+        }
+    }
+
+    &__close:visited,
+    &__close:link {
+        position: absolute;
+        outline: none;
+        text-decoration: none;
+        top: -.5rem;
+        right: 1.5rem;
+        font-size: 4rem;
+        color: currentColor;
+        transition: all .2s;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $color-dark;
+        border-bottom: solid $color-dark .2rem;
+        text-shadow: 0 .5rem 1.8rem rgba($color-dark, .5);
+        transform: scale(1.05);
+
+        span {
+            animation: suggestRight 1s linear;
+        }
+    }
+
+    &__close:hover,
+    &__close:focus {
+        color: $color-dark;
+        text-shadow: 0 .5rem 2rem rgba($color-dark, .5);
+        transform: scale(1.1);
+    }
+
+   
 }

@@ -82,3 +82,26 @@
         transform: translate(-50%, 0);
     }
 }
+
+// makes element slightly bounce to the right from its original place(-2.5rem);
+@keyframes suggestRight {
+    0% {
+        right: -2.2rem;
+    }
+
+    25% {
+        right: -3.2rem;
+    }
+
+    50% {
+        right: -2.2rem;
+    }
+
+    75% {
+        right: -3.2rem;
+    }
+
+    100% {
+        right: -2.5rem;
+    }
+}
