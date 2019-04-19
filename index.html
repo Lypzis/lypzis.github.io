@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' 
+    https://use.fontawesome.com 
+    https://fonts.googleapis.com/ 
+    https://fonts.gstatic.com/
+    https://avatars1.githubusercontent.com
+    https://jigsaw.w3.org/">-->
+
     <title>Lypzis | Where the code comes to life</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="dist/css/favicons/apple-touch-icon.png">
@@ -32,6 +39,10 @@
             <img src="dist/img/Logo-Transparent.png" alt="Logo" class="header__logo">
         </div>
 
+        <div class="header__logo-box-secondary">
+            <img src="dist/img/Logo-Transparent.png" alt="Logo" class="header__logo">
+        </div>
+
         <div class="header__text-box">
             <div class="heading-primary">
                 <h1 class="heading-primary--main">
@@ -42,13 +53,13 @@
                 </h2>
             </div>
 
-            <a href="#" class="button button-animated button__section">Know More</a>
+            <a href="#section-about" class="button button-animated button__section">Know More</a>
         </div>
     </header>
 
     <main>
         <section class="section-about">
-            <div class="about">
+            <div class="about"  id="section-about">
                 <div class="row">
                     <h3 class="title">
                         About Myself
@@ -80,7 +91,7 @@
             </div>
         </section>
 
-        <section class="section-work">
+        <section class="section-work" id="section-work">
             <div class="work">
                 <div class="row">
                     <h3 class="title">
@@ -89,18 +100,45 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-1-of-2">
+                    <div class="work__box-list">
                         <div class="work__box work__box-1">
+                            <div class="work__box-title">
+                                <h4 class="title-secondary">
+                                    Finished
+                                </h4>
+                            </div>
+
+                            <a href="#popup" class="button button-label">
+                                <i class="fas fa-list-alt"></i>
+                            </a>
+                        </div>
+
+                        <div class="work__box work__box-2">
                             <div class="work__box-title">
                                 <h4 class="title-secondary">
                                     Currently Learning
                                 </h4>
                             </div>
 
-                            <input type="checkbox" class="input__invisible" id="myEducation">
-                            <label class="button button-label" for="myEducation">
+                            <a href="#popup-2" class="button button-label" for="myEducation">
                                 <i class="fas fa-book"></i>
-                            </label>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+<!--
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="work__box work__box-1">
+                            <div class="work__box-title">
+                                <h4 class="title-secondary">
+                                    Finished
+                                </h4>
+                            </div>
+
+                            <a href="#popup" class="button button-label">
+                                <i class="fas fa-list-alt"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -108,17 +146,16 @@
                         <div class="work__box work__box-2">
                             <div class="work__box-title">
                                 <h4 class="title-secondary">
-                                    Finished
+                                    Currently Learning
                                 </h4>
                             </div>
 
-                            <input type="checkbox" class="input__invisible" id="myProjects">
-                            <label class="button button-label" for="myProjects">
-                                <i class="fas fa-list-alt"></i>
-                            </label>
+                            <a href="#popup-2" class="button button-label" for="myEducation">
+                                <i class="fas fa-book"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </section>
 
@@ -159,11 +196,135 @@
         <p title="The W3C CSS Validation Service">
             <a target="_blank"
                 href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flypzis.github.io%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=0&amp;vextwarning=">
-                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-                    alt="Valid CSS!">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!">
             </a>
         </p>
     </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <a href="#section-work" class=" btn button__close">&times;</a>
+            
+            <h3 class="title-tertiary">Sass & CSS</h3>
+            <ol class="popup__list">
+
+                <li class="popup__list-item">
+                    <div class="popup__box">
+                        <figure class="popup__box-picture">
+                            <img src="dist/img/trillo-picture.png" alt="Trillo Project" class="popup__picture">
+                        </figure>
+                        <div class="popup__box-description">
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in ut obcaecati
+                                dolorum
+                                nemo illum aperiam cumque, vitae omnis sint? Nobis sit quidem illo asperiores nostrum
+                                quaerat totam error sunt.
+                            </p>
+                            <div class="popup__box-link">
+                                <a target="_blank" href="https://lypzis.github.io/Sass/Trillo/" class="btn button__link">view page <span>&rarr;</span></a>  
+                                <a target="_blank" href="https://github.com/Lypzis/Sass/tree/master/Trillo" class="btn button__link">source code <span>&rarr;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <h3 class="title-tertiary">Javascript&emsp;/&emsp;ES6</h3>
+            <ol class="popup__list">
+
+                <li class="popup__list-item">
+                    <div class="popup__box">
+                        <figure class="popup__box-picture">
+                            <img src="dist/img/trillo-picture.png" alt="Trillo Project" class="popup__picture">
+                        </figure>
+                        <div class="popup__box-description">
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in ut obcaecati
+                                dolorum
+                                nemo illum aperiam cumque, vitae omnis sint? Nobis sit quidem illo asperiores nostrum
+                                quaerat totam error sunt.
+                            </p>
+                            <div class="popup__box-link">
+                                <a target="_blank" href="https://lypzis.github.io/Sass/Trillo/" class="btn button__link">view page <span>&rarr;</span></a>  
+                                <a target="_blank" href="https://github.com/Lypzis/Sass/tree/master/Trillo" class="btn button__link">source code <span>&rarr;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <h3 class="title-tertiary">Node JS</h3>
+            <ol class="popup__list">
+
+                <li class="popup__list-item">
+                    <div class="popup__box">
+                        <figure class="popup__box-picture">
+                            <img src="dist/img/trillo-picture.png" alt="Trillo Project" class="popup__picture">
+                        </figure>
+                        <div class="popup__box-description">
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in ut obcaecati
+                                dolorum
+                                nemo illum aperiam cumque, vitae omnis sint? Nobis sit quidem illo asperiores nostrum
+                                quaerat totam error sunt.
+                            </p>
+                            <div class="popup__box-link">
+                                <a target="_blank" href="https://lypzis.github.io/Sass/Trillo/" class="btn button__link">view page <span>&rarr;</span></a>  
+                                <a target="_blank" href="https://github.com/Lypzis/Sass/tree/master/Trillo" class="btn button__link">source code <span>&rarr;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <h3 class="title-tertiary">...and much more</h3>
+            <ol class="popup__list">
+
+                <li class="popup__list-item">
+                    <div class="popup__box">
+                        <figure class="popup__box-picture">
+                            <img src="dist/img/mind-blowing.gif" alt="Mind Blow" class="popup__picture">
+                        </figure>
+                        <div class="popup__box-description">
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in ut obcaecati
+                                dolorum
+                                nemo illum aperiam cumque, vitae omnis sint? Nobis sit quidem illo asperiores nostrum
+                                quaerat totam error sunt.
+                            </p>
+                            <div class="popup__box-link">
+                                <a target="_blank" href="https://github.com/Lypzis" class="btn button__link">On GitHub <span>&rarr;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-2">
+        <div class="popup__content  popup__content--small">
+            <a href="#section-work" class=" btn button__close">&times;</a>
+            <h3 class="title-tertiary">CSS Grid</h3>
+            <div class="popup__box popup__box--no-border-bottom">
+                <figure class="popup__box-picture">
+                    <img src="dist/img/trillo-picture.png" alt="Trillo Project" class="popup__picture">
+                </figure>
+                <div class="popup__box-description">
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in ut obcaecati
+                        dolorum
+                        nemo illum aperiam cumque, vitae omnis sint? Nobis sit quidem illo asperiores nostrum
+                        quaerat totam error sunt.
+                    </p>
+                    <div class="popup__box-link">
+                        <a target="_blank" href="#" class="btn button__link">view page <span>&rarr;</span></a>  
+                        <a target="_blank" href="#" class="btn button__link">source code <span>&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
