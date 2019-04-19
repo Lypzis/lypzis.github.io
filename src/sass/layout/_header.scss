@@ -8,10 +8,25 @@
     position: relative;
     background-attachment: fixed;
 
+    &__text-box {
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80rem;
+        text-align: center;
+    }
+
     &__logo-box {
         position: absolute;
         top: 4rem;
         left: 4rem;
+    }
+
+    &__logo-box-secondary {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
     }
 
     &__logo {
@@ -22,15 +37,17 @@
         animation: fadeIn 4.5s ease-in;
     }
 
+    &__logo-box-secondary &__logo {
+        animation: none;
+        opacity: 0;
+    }
+
+    // logo dissapears and reappears to the other side :O
     &__logo-box:hover &__logo {
         opacity: 0;
      } 
 
-    &__text-box {
-        position: absolute; 
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
+    &__logo-box:hover + &__logo-box-secondary &__logo {
+        opacity: 1;
+     } 
 }

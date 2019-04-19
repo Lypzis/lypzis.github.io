@@ -2,7 +2,7 @@
     max-width: $grid-width; // maximum width achievable, meaning that even if more is available
                         // the row won't get larger than this value.
     margin: 0 auto; // center it, making the left and right values equals;
-    
+
     // select everything except the last child
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;

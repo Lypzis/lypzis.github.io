@@ -1,3 +1,21 @@
+/*
+0 - 600px:     Phone
+601 - 950px:   Tablet Portrait
+951 - 1200px:  Tablet Landscape
+
+[1201 - 1800px: Desktops (Default Styles apply)]
+
+> 1801px:      Big Desktops
+*/
+/*
+$breakpoint argument choices:
+- phone 
+- tab-port  
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -107,7 +125,7 @@ body {
 .heading-primary--sub {
   backface-visibility: hidden;
   display: block;
-  font-size: 3rem;
+  font-size: 2.9rem;
   letter-spacing: 0.6rem;
   animation: fadeInRight 3s ease-out;
 }
@@ -146,10 +164,36 @@ body {
 
 html {
   font-size: 62.5%;
+  padding: 2rem;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 59.375em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media only screen and (max-width: 23.43em) {
+  html {
+    font-size: 31.25%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
-  padding: 2rem;
   box-sizing: border-box;
 }
 
@@ -168,10 +212,23 @@ body {
   position: relative;
   background-attachment: fixed;
 }
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80rem;
+  text-align: center;
+}
 .header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
+}
+.header__logo-box-secondary {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
 }
 .header__logo {
   opacity: 1;
@@ -179,15 +236,15 @@ body {
   transition: all 2s ease-in 3s;
   animation: fadeIn 4.5s ease-in;
 }
+.header__logo-box-secondary .header__logo {
+  animation: none;
+  opacity: 0;
+}
 .header__logo-box:hover .header__logo {
   opacity: 0;
 }
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.header__logo-box:hover + .header__logo-box-secondary .header__logo {
+  opacity: 1;
 }
 
 .row {
@@ -395,6 +452,16 @@ body {
   color: #6e6e6e;
   margin: 0 auto;
 }
+@media only screen and (max-width: 43.75em) {
+  .about {
+    height: 85rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .about {
+    height: 95rem;
+  }
+}
 .about__picture {
   position: relative;
   float: left;
@@ -409,7 +476,7 @@ body {
   border: 1rem ridge;
   margin-bottom: 2rem;
   box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
-  transition: all 3s ease-in 4s;
+  transition: all 3s ease-in 5s;
 }
 .about__picture:hover .about__picture-photo {
   transform-origin: top left;
@@ -428,17 +495,34 @@ body {
   position: relative;
   background-attachment: fixed;
   -webkit-clip-path: polygon(0px 0px, 50% 5vh, 100% 0px, 100% 95vh, 50% 100%, 0px 95vh);
-  clip-path: polygon(0 0, 50% 5rem, 100% 0, 100% 95vh, 50% 100%, 0 95vh);
+  clip-path: polygon(0 0, 50% 5vh, 100% 0, 100% 95vh, 50% 100%, 0 95vh);
+  /*
+  .input__invisible:focus + .button-label {
+      @include buttonIconWhiteToBlack;
+  } */
+}
+@media only screen and (max-width: 46.875em) {
+  .work {
+    height: 105rem;
+    -webkit-clip-path: polygon(0px 0px, 50% 5rem, 100% 0px, 100% 100rem, 50% 100%, 0px 100rem);
+    clip-path: polygon(0px 0px, 50% 5rem, 100% 0px, 100% 100rem, 50% 100%, 0px 100rem);
+  }
+}
+.work__box-list {
+  display: flex;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 46.875em) {
+  .work__box-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .work__box {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*
-  .input__invisible:focus + .button-label {
-      @include buttonIconWhiteToBlack;
-  } */
 }
 .work__box-1 {
   top: -3rem;
@@ -455,16 +539,16 @@ body {
 .work__box-title .title-secondary {
   border-bottom: solid 0.2rem transparent;
 }
-.work__box:hover .title-secondary {
+.work__box-list .work__box:hover .title-secondary {
   border-bottom: solid 0.2rem #fff;
 }
-.work__box:hover .button-label {
+.work__box-list .work__box:hover .button-label {
   background: #000;
   box-shadow: 0 1rem 0.7rem rgba(0, 0, 0, 0.4);
   transform: translateY(-1rem);
   border: solid 0.5rem #fff;
 }
-.work__box:hover .button-label i {
+.work__box-list .work__box:hover .button-label i {
   color: #fff;
 }
 
@@ -481,6 +565,11 @@ body {
   color: #6e6e6e;
   height: 50vh;
   margin-top: 4rem;
+}
+@media only screen and (max-width: 23.43em) {
+  .contact {
+    height: 30vh;
+  }
 }
 .contact__box {
   display: flex;
@@ -567,12 +656,24 @@ body {
   transition: transform 0.6s, opacity 0.2s;
   overflow: auto;
 }
+@media only screen and (max-width: 28.125em) {
+  .popup__content {
+    max-width: 60rem;
+    padding: 1rem 3rem;
+    height: 100%;
+  }
+}
 .popup__content--small {
   height: auto;
 }
 .popup__list {
   list-style: none;
   margin-bottom: 4rem;
+}
+@media only screen and (max-width: 28.125em) {
+  .popup__list {
+    margin-bottom: 6rem;
+  }
 }
 .popup__list-item:not(:first-child) {
   margin-top: 3rem;
@@ -583,12 +684,26 @@ body {
   padding-bottom: 1rem;
   border-bottom: solid 0.1rem rgba(110, 110, 110, 0.3);
 }
+@media only screen and (max-width: 28.125em) {
+  .popup__box {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+}
 .popup__box--no-border-bottom {
   border-bottom: none;
 }
 .popup__box-picture {
   width: 85rem;
   overflow: hidden;
+}
+@media only screen and (max-width: 28.125em) {
+  .popup__box-picture {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .popup__picture {
   width: 100%;
@@ -597,11 +712,21 @@ body {
   border-radius: 0.7rem;
   border: solid black 0.2rem;
 }
+@media only screen and (max-width: 28.125em) {
+  .popup__picture {
+    margin-bottom: 2rem;
+  }
+}
 .popup__box-description {
   display: inherit;
   margin-left: 3rem;
   flex-direction: column;
   justify-content: space-between;
+}
+@media only screen and (max-width: 28.125em) {
+  .popup__box-description {
+    margin-left: 0;
+  }
 }
 .popup__box-link {
   display: inherit;
@@ -618,8 +743,23 @@ body {
 
 .section-about {
   margin-top: -20vh;
-  padding: 27.5rem 5rem;
+  padding: 27.5rem 11rem;
   background: #f6f6f6;
+}
+@media only screen and (max-width: 43.75em) {
+  .section-about {
+    padding: 27.5rem 8rem;
+  }
+}
+@media only screen and (max-width: 28.125em) {
+  .section-about {
+    padding: 27.5rem 4rem;
+  }
+}
+@media only screen and (max-width: 23.43em) {
+  .section-about {
+    padding: 30.5rem 4rem;
+  }
 }
 
 .section-work {

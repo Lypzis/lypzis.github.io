@@ -7,7 +7,24 @@
     position: relative;
     background-attachment: fixed;
     -webkit-clip-path: polygon(0px 0px, 50% 5vh, 100% 0px, 100% 95vh, 50% 100%, 0px 95vh);
-    clip-path: polygon(0 0, 50% 5rem, 100% 0, 100% 95vh, 50% 100%, 0 95vh);
+    clip-path: polygon(0 0, 50% 5vh, 100% 0, 100% 95vh, 50% 100%, 0 95vh);
+
+    
+    @media only screen and(max-width: $custom-media-query-1) {
+        height: 105rem;
+        -webkit-clip-path: polygon(0px 0px, 50% 5rem, 100% 0px, 100% 100rem, 50% 100%, 0px 100rem);
+        clip-path: polygon(0px 0px, 50% 5rem, 100% 0px, 100% 100rem, 50% 100%, 0px 100rem);
+    }
+
+    &__box-list {
+        display: flex;
+        justify-content: space-around;
+
+        @media only screen and(max-width: $custom-media-query-1) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 
     &__box {
         position: relative;
@@ -34,17 +51,17 @@
                 border-bottom: solid .2rem transparent;
             }
         }
-
-        &:hover .title-secondary {
-            border-bottom: solid .2rem $color-white;
-        }
-
-        &:hover .button-label {
-            @include buttonIconWhiteToBlack;
-        }
-        /*
-        .input__invisible:focus + .button-label {
-            @include buttonIconWhiteToBlack;
-        } */
     }
+
+    &__box-list &__box:hover .title-secondary {
+        border-bottom: solid .2rem $color-white;
+    }
+
+    &__box-list &__box:hover .button-label {
+        @include buttonIconWhiteToBlack;
+    }
+    /*
+    .input__invisible:focus + .button-label {
+        @include buttonIconWhiteToBlack;
+    } */
 }

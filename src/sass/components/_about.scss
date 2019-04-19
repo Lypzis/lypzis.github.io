@@ -4,6 +4,14 @@
     color: $color-gray;
     margin: 0 auto;
 
+    @media only screen and(max-width: $custom-media-query-2) {
+       height: 85rem;
+    }
+
+    @media only screen and(max-width: $custom-media-query-3) {
+        height: 95rem;
+     }
+
     &__picture {
         position: relative;
         float: left;
@@ -18,7 +26,7 @@
             border: 1rem ridge;
             margin-bottom: 2rem;
             box-shadow: 0 .3rem .3rem rgba($color-dark, .3);     
-            transition: all 3s ease-in 4s;
+            transition: all 3s ease-in 5s;
         }
 
         &:hover &-photo {
