@@ -1,12 +1,21 @@
 .header {
     height: 95vh;
-    background-image: linear-gradient(to bottom, rgba($color-dark, .2), rgba($color-dark, .95)), url(../img/Castle-bg.jpg);
+    background-image: linear-gradient(to bottom, rgba($color-dark, .2), rgba($color-dark, .95)), url(../img/Castle-bg-small.jpg);
     background-size: cover;
     background-position: top;
     -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh);  
     clip-path: polygon(0px 0px, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh); 
     position: relative;
     background-attachment: fixed;
+    
+    // dpi = dots per inch, if resolutions is higher than 192dpi AND width higher than 600px OR 2000px, use this background-image instead.
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), // for safari
+            only screen and (min-width: 125em) {
+        background-image: linear-gradient(to bottom, rgba($color-dark, .2),
+                          rgba($color-dark, .95)), 
+                          url(../img/Castle-bg.jpg);
+    }
 
     &__text-box {
         position: absolute; 
