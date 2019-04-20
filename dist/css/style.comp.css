@@ -204,13 +204,18 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)), url(../img/Castle-bg.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)), url(../img/Castle-bg-small.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh);
   clip-path: polygon(0px 0px, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh);
   position: relative;
   background-attachment: fixed;
+}
+@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+  .header {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)), url(../img/Castle-bg.jpg);
+  }
 }
 .header__text-box {
   position: absolute;
@@ -487,7 +492,7 @@ body {
 }
 
 .work {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)), url(../img/OpenBook.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)), url(../img/OpenBook-small.jpg);
   background-size: cover;
   background-position: top;
   height: 100vh;
@@ -500,6 +505,11 @@ body {
   .input__invisible:focus + .button-label {
       @include buttonIconWhiteToBlack;
   } */
+}
+@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+  .work {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)), url(../img/OpenBook.jpg);
+  }
 }
 @media only screen and (max-width: 46.875em) {
   .work {
@@ -565,6 +575,11 @@ body {
   color: #6e6e6e;
   height: 50vh;
   margin-top: 4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact {
+    height: 40vh;
+  }
 }
 @media only screen and (max-width: 23.43em) {
   .contact {
@@ -634,12 +649,11 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s;
-}
-@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
-  .popup {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
+  /*
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);  
+  }*/
 }
 .popup__content {
   position: relative;
