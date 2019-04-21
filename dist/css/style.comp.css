@@ -1,13 +1,4 @@
 /*
-0 - 600px:     Phone
-601 - 950px:   Tablet Portrait
-951 - 1200px:  Tablet Landscape
-
-[1201 - 1800px: Desktops (Default Styles apply)]
-
-> 1801px:      Big Desktops
-*/
-/*
 $breakpoint argument choices:
 - phone 
 - tab-port  
@@ -154,6 +145,12 @@ body {
   font-size: 2.2rem;
 }
 
+.quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #8e8e8e;
+}
+
 *,
 *::after,
 *::before {
@@ -195,6 +192,7 @@ html {
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -432,9 +430,15 @@ body {
   text-decoration: none;
   top: -0.5rem;
   right: 1.5rem;
-  font-size: 4rem;
+  font-size: 5rem;
   color: currentColor;
   transition: all 0.2s;
+}
+@media only screen and (max-width: 28.125em) {
+  .button__close:visited, .button__close:link {
+    top: -2.4rem;
+    right: 1.2rem;
+  }
 }
 .button__link:hover, .button__link:focus {
   color: #000;
@@ -453,18 +457,43 @@ body {
 
 .about {
   position: relative;
-  height: 70rem;
+  height: 95rem;
   color: #6e6e6e;
   margin: 0 auto;
 }
+@media only screen and (max-width: 50em) {
+  .about {
+    height: 100rem;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .about {
+    height: 110rem;
+  }
+}
 @media only screen and (max-width: 43.75em) {
   .about {
-    height: 85rem;
+    height: 120rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about {
+    height: 118rem;
   }
 }
 @media only screen and (max-width: 31.25em) {
   .about {
-    height: 95rem;
+    height: 130rem;
+  }
+}
+@media only screen and (max-width: 28.125em) {
+  .about {
+    height: 145rem;
+  }
+}
+@media only screen and (max-width: 23.43em) {
+  .about {
+    height: 127rem;
   }
 }
 .about__picture {
@@ -475,13 +504,19 @@ body {
   margin-right: 5rem;
   text-align: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .about__picture {
+    width: 20rem;
+    height: 27rem;
+  }
+}
 .about__picture-photo {
   width: 100%;
   border-radius: 3rem;
   border: 1rem ridge;
   margin-bottom: 2rem;
   box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
-  transition: all 3s ease-in 5s;
+  transition: all 3s ease-in 3.5s;
 }
 .about__picture:hover .about__picture-photo {
   transform-origin: top left;
@@ -489,6 +524,13 @@ body {
 }
 .about__description {
   margin: 0 auto;
+}
+.about__description-quote-box {
+  display: flex;
+  justify-content: end;
+}
+.about__description-quote-box .quote {
+  width: 35%;
 }
 
 .work {
@@ -670,11 +712,15 @@ body {
   transition: transform 0.6s, opacity 0.2s;
   overflow: auto;
 }
+@media only screen and (max-width: 37.5em) {
+  .popup__content {
+    max-width: 100%;
+    height: 100%;
+  }
+}
 @media only screen and (max-width: 28.125em) {
   .popup__content {
-    max-width: 60rem;
     padding: 1rem 3rem;
-    height: 100%;
   }
 }
 .popup__content--small {
@@ -694,14 +740,14 @@ body {
 }
 .popup__box {
   display: flex;
+  align-items: center;
   margin-top: 2rem;
   padding-bottom: 1rem;
   border-bottom: solid 0.1rem rgba(110, 110, 110, 0.3);
 }
-@media only screen and (max-width: 28.125em) {
+@media only screen and (max-width: 37.5em) {
   .popup__box {
     flex-direction: column;
-    align-items: center;
     margin-top: 3rem;
   }
 }
@@ -711,10 +757,15 @@ body {
 .popup__box-picture {
   width: 85rem;
   overflow: hidden;
+  flex: 0 0 33%;
+}
+@media only screen and (max-width: 37.5em) {
+  .popup__box-picture {
+    width: auto;
+  }
 }
 @media only screen and (max-width: 28.125em) {
   .popup__box-picture {
-    width: auto;
     flex-direction: column;
     align-items: center;
   }
@@ -726,7 +777,7 @@ body {
   border-radius: 0.7rem;
   border: solid black 0.2rem;
 }
-@media only screen and (max-width: 28.125em) {
+@media only screen and (max-width: 37.5em) {
   .popup__picture {
     margin-bottom: 2rem;
   }
@@ -737,7 +788,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-@media only screen and (max-width: 28.125em) {
+@media only screen and (max-width: 37.5em) {
   .popup__box-description {
     margin-left: 0;
   }
