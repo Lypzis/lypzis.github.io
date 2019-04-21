@@ -38,16 +38,6 @@
 
 // MEDIA QUERY MANAGER
 /*
-0 - 600px:     Phone
-601 - 950px:   Tablet Portrait
-951 - 1200px:  Tablet Landscape
-
-[1201 - 1800px: Desktops (Default Styles apply)]
-
-> 1801px:      Big Desktops
-*/
-
-/*
 $breakpoint argument choices:
 - phone 
 - tab-port  
@@ -61,6 +51,10 @@ $breakpoint argument choices:
     @if $breakpoint == phone {
         // 600px
         @media only screen and (max-width: 37.5em) { @content };
+    }
+    @if $breakpoint == phone-secondary {
+        // 800px
+        @media only screen and (max-width: 50em) { @content };
     }
     @if $breakpoint == tab-port {
         // 950px;

@@ -1,16 +1,36 @@
 .about {
     position: relative;
-    height: 70rem;
+    height: 95rem;
     color: $color-gray;
     margin: 0 auto;
 
+    @include respond(phone-secondary) {
+        height: 100rem;
+    }
+
+    @media only screen and(max-width: $custom-media-query-1) {
+       height: 110rem;
+    }
+
     @media only screen and(max-width: $custom-media-query-2) {
-       height: 85rem;
+       height: 120rem;
+    }
+
+    @include respond(phone) {
+        height: 118rem;
     }
 
     @media only screen and(max-width: $custom-media-query-3) {
-        height: 95rem;
-     }
+        height: 130rem;
+    }
+
+    @media only screen and(max-width: $custom-media-query-4) {
+        height: 145rem;
+    }
+
+    @media only screen and(max-width: $custom-media-query-5) {
+        height: 127rem;
+    }
 
     &__picture {
         position: relative;
@@ -20,13 +40,18 @@
         margin-right: 5rem;
         text-align: center;
 
+        @include respond(phone) {
+            width: 20rem;
+            height: 27rem;
+        }
+
         &-photo {
             width: 100%;
             border-radius: 3rem;
             border: 1rem ridge;
             margin-bottom: 2rem;
             box-shadow: 0 .3rem .3rem rgba($color-dark, .3);     
-            transition: all 3s ease-in 5s;
+            transition: all 3s ease-in 3.5s;
         }
 
         &:hover &-photo {
@@ -37,5 +62,14 @@
 
     &__description {
         margin: 0 auto;
+    }
+
+    &__description-quote-box {
+        display: flex;
+        justify-content: end;
+        
+        .quote {
+            width: 35%;
+        } 
     }
 }
