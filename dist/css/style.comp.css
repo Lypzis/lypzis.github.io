@@ -425,6 +425,7 @@ body {
 }
 .button__link:visited span, .button__link:link span {
   position: absolute;
+  top: 0;
   right: -2.5rem;
   transition: inherit;
 }
@@ -799,7 +800,7 @@ body {
 }
 .popup__box-link {
   display: inherit;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .popup:target {
   opacity: 1;

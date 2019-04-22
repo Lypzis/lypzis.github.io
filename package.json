@@ -10,7 +10,7 @@
     "compile": "sass ./src/sass/main.scss ./dist/css/style.comp.css",
     "prefix": "postcss --use autoprefixer -b 'last 5 versions' ./dist/css/style.comp.css -o ./dist/css/style.prefix.css",
     "compress": "sass ./dist/css/style.prefix.css ./dist/css/style.css --style compressed",
-    "build": "npm-run-all compile prefix compress"
+    "build": "npm-run-all compile compress"
   },
   "license": "MIT",
   "dependencies": {},
