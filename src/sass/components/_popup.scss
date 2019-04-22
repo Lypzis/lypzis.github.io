@@ -118,6 +118,7 @@
         border: solid black .2rem;
 
         @include respond(phone) {
+            width: auto;
             margin-bottom: 2rem;
         }
     }
