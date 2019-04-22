@@ -49,6 +49,9 @@
     }
 
     &__logo--secondary {
+        opacity: 1;
+        height: 6rem;
+        transition: all 2s ease-in 3s;
         animation: none;
     }
 
