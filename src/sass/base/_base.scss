@@ -34,7 +34,7 @@ html {
 
 body { 
     padding: 2rem;
-    //overflow-x: hidden;
+    overflow-x: hidden;
     box-sizing: border-box;
 
     @include respond(tab-land) {
