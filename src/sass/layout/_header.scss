@@ -48,6 +48,7 @@
         animation: fadeIn 4.5s ease-in;
     }
 
+    /*
     &__logo--secondary {
         opacity: 1;
         height: 6rem;
@@ -57,14 +58,15 @@
 
     &__logo-box-secondary {
         opacity: 0;
-    }
+    } */
 
-    // logo dissapears and reappears to the other side :O
+    // logo dissapears 
     &__logo-box:hover &__logo {
         opacity: 0;
      } 
 
+     /*
     &__logo-box:hover + &__logo-box-secondary {
         opacity: 1;
-     } 
+     } */
 }
