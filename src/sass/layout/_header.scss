@@ -34,8 +34,10 @@
 
     &__logo-box-secondary {
         position: absolute;
+        opacity: 0;
         top: 4rem;
         right: 4rem;
+        transition: all 2s ease-in 3s;
     }
 
     &__logo {
@@ -56,6 +58,7 @@
         opacity: 0;
      } 
 
+    &__logo-box:hover + &__logo-box-secondary,
     &__logo-box:hover + &__logo-box-secondary &__logo {
         opacity: 1;
      } 

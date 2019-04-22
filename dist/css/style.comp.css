@@ -234,8 +234,10 @@ body {
 }
 .header__logo-box-secondary {
   position: absolute;
+  opacity: 0;
   top: 4rem;
   right: 4rem;
+  transition: all 2s ease-in 3s;
 }
 .header__logo {
   opacity: 1;
@@ -250,7 +252,7 @@ body {
 .header__logo-box:hover .header__logo {
   opacity: 0;
 }
-.header__logo-box:hover + .header__logo-box-secondary .header__logo {
+.header__logo-box:hover + .header__logo-box-secondary, .header__logo-box:hover + .header__logo-box-secondary .header__logo {
   opacity: 1;
 }
 
@@ -703,7 +705,7 @@ body {
   }*/
 }
 .popup__content {
-  position: relative;
+  position: absolute;
   background: #fff;
   height: 80%;
   max-width: 90rem;
@@ -726,6 +728,11 @@ body {
 @media only screen and (max-width: 28.125em) {
   .popup__content {
     padding: 1rem 3rem;
+  }
+}
+@media only screen and (max-width: 59.375em) {
+  .popup {
+    overflow: auto;
   }
 }
 .popup__content--small {
