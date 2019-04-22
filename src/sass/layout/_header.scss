@@ -48,8 +48,11 @@
         animation: fadeIn 4.5s ease-in;
     }
 
-    &__logo-box-secondary &__logo {
+    &__logo--secondary {
         animation: none;
+    }
+
+    &__logo-box-secondary {
         opacity: 0;
     }
 
@@ -58,8 +61,7 @@
         opacity: 0;
      } 
 
-    &__logo-box:hover + &__logo-box-secondary,
-    &__logo-box:hover + &__logo-box-secondary &__logo {
+    &__logo-box:hover + &__logo-box-secondary {
         opacity: 1;
      } 
 }

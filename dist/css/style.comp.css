@@ -246,14 +246,16 @@ body {
   transition: all 2s ease-in 3s;
   animation: fadeIn 4.5s ease-in;
 }
-.header__logo-box-secondary .header__logo {
+.header__logo--secondary {
   animation: none;
+}
+.header__logo-box-secondary {
   opacity: 0;
 }
 .header__logo-box:hover .header__logo {
   opacity: 0;
 }
-.header__logo-box:hover + .header__logo-box-secondary, .header__logo-box:hover + .header__logo-box-secondary .header__logo {
+.header__logo-box:hover + .header__logo-box-secondary {
   opacity: 1;
 }
 
