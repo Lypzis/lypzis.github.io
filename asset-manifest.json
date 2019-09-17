@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6005c18a.chunk.css",
+    "main.js": "/static/js/main.10e65d8a.chunk.js",
+    "main.js.map": "/static/js/main.10e65d8a.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.30c55c12.js",
+    "runtime~main.js.map": "/static/js/runtime~main.30c55c12.js.map",
+    "static/js/2.b6169b81.chunk.js": "/static/js/2.b6169b81.chunk.js",
+    "static/js/2.b6169b81.chunk.js.map": "/static/js/2.b6169b81.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.338056de237e67df579efc5fe8ff1dbf.js": "/precache-manifest.338056de237e67df579efc5fe8ff1dbf.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6005c18a.chunk.css.map": "/static/css/main.6005c18a.chunk.css.map",
+    "static/media/main.scss": "/static/media/OpenBook.5e3eb947.jpg",
+    "static/media/React.png": "/static/media/React.127b470a.png",
+    "static/media/forkify-picture.jpg": "/static/media/forkify-picture.8d3ab795.jpg",
+    "static/media/lypzis-picture.jpg": "/static/media/lypzis-picture.1a690866.jpg",
+    "static/media/mind-blowing.gif": "/static/media/mind-blowing.a6c92868.gif",
+    "static/media/natour-picture.jpg": "/static/media/natour-picture.ae25a1f3.jpg",
+    "static/media/omnifood-picture.jpg": "/static/media/omnifood-picture.31e65686.jpg",
+    "static/media/trillo-picture.jpg": "/static/media/trillo-picture.02464fc7.jpg"
+  }
+}
