@@ -1,6 +1,6 @@
 .header {
     height: 95vh;
-    background-image: linear-gradient(to bottom, rgba($color-dark, .2), rgba($color-dark, .95)), url(../img/Castle-bg-small.jpg);
+    background-image: linear-gradient(to bottom, rgba($color-dark, .2), rgba($color-dark, .95)), url(../../assets/images/Castle-bg-small.jpg);
     background-size: cover;
     background-position: top;
     -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh);  
@@ -14,7 +14,7 @@
             only screen and (min-width: 125em) {
         background-image: linear-gradient(to bottom, rgba($color-dark, .2),
                           rgba($color-dark, .95)), 
-                          url(../img/Castle-bg.jpg);
+                          url(../../assets/images/Castle-bg.jpg);
     }
 
     &__text-box {
