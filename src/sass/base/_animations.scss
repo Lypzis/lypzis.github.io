@@ -1,0 +1,107 @@
+@keyframes moveInLeft { 
+    0% {
+        opacity: 0; 
+        transform: translateX(-10rem); 
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0); 
+    }
+}
+
+@keyframes fadeInRight { 
+    0% {
+        opacity: 0;
+        transform: translateX(12rem); 
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: .3;
+    }
+
+    70% {
+        opacity: .6;
+    }
+
+    80% {
+        opacity: .8;
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);  
+    }
+}
+
+@keyframes fadeIn { 
+    0% {
+        opacity: 0; 
+    }
+
+    100% {
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+        left: 50%;
+        transform: translate(-50%, 2rem);
+    }
+
+    80% {
+        opacity: .4;
+        left: 50%;
+        transform: translate(-50%, 1rem);
+    }
+
+    90% {
+        opacity: .7;
+        left: 50%;
+        transform: translate(-50%, -1rem);
+    }
+
+    100% {
+        opacity: 1;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+// makes element slightly bounce to the right from its original place(-2.5rem);
+@keyframes suggestRight {
+    0% {
+        right: -2.2rem;
+    }
+
+    25% {
+        right: -3.2rem;
+    }
+
+    50% {
+        right: -2.2rem;
+    }
+
+    75% {
+        right: -3.2rem;
+    }
+
+    100% {
+        right: -2.5rem;
+    }
+}

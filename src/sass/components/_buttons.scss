@@ -1,0 +1,167 @@
+.button {
+    cursor: pointer;
+    padding: 1rem 4rem;
+    display: inline-block;
+    transition: all .2s;
+    backface-visibility: hidden;
+
+    &,
+    &:link,
+    &:visited {
+        font-size: 2rem;
+    }
+
+    &__section {
+        position: absolute;
+        background: $color-white;
+        transform: translateX(-50%);
+        left: 50%;
+        border-radius: 1.5rem;
+        outline: none;
+        font-weight: 600;
+        text-decoration: none;
+        color: $color-gray;
+        
+        &:hover,
+        &:focus {
+            box-shadow: 0 1rem .7rem rgba($color-dark, .4);
+            transform: translate(-50%, -1rem);
+            left: 50%;
+    
+            &::after {
+                background: $color-white;
+                transform: scaleX(1.7) scaleY(1.9);
+                opacity: 0;
+            }
+        }
+
+        &:active {
+            left: 50%;
+            transform: translate(-50%, .05rem);
+            box-shadow: 0 .5rem .2rem rgba($color-dark, .8); /* nice shadow is lowered to cause the impression of pressing */
+        }
+
+        &::after  {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 1.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s;
+        }
+    }
+
+    &-animated {
+        animation: fadeInBottom 4s ease-out;
+    }
+
+    &-label {
+        margin-top: 3.5rem;
+        width: 100%;
+        background: $color-white;
+        border-radius: 1.5rem;
+        border: solid .5rem transparent;
+        text-align: center;
+        transition: all .5s;
+
+        &-logo {
+            width: 100%;
+        }
+
+        i,
+        &-logo {
+            color: $color-gray;
+            font-size: 15rem;
+            margin: 0 auto;
+            padding: 3rem 4rem;
+        }
+
+        &:focus {
+            @include buttonIconWhiteToBlack;
+        }
+    }
+
+    &-name{
+        display: block;
+        text-decoration: none;
+        outline: none;
+        font-size: 1.8rem;
+        border: solid .2rem;
+        color: $color-gray;
+        border-radius: 1rem;
+        padding: .4rem 1rem;
+        backface-visibility: hidden;
+        transition: all .4s;
+
+        &:hover,
+        &:focus {
+            @include buttonNameWhiteToBlack;
+        }
+    }
+
+    &__link:visited,
+    &__link:link {
+        &:not(:last-child) {
+            margin-right: 7rem;
+        }
+        
+        position: relative;
+        margin-right: 3rem;
+        padding: .2rem;
+        font-size: 2.1rem;
+        outline: none;
+        text-decoration: none;
+        color: $color-gray;
+        border-bottom: solid transparent .2rem;
+        transition: all .3s;
+
+        span {
+            position: absolute;
+            top: 0;
+            right: -2.5rem;
+            transition: inherit;
+        }
+    }
+
+    &__close:visited,
+    &__close:link {
+        position: absolute;
+        outline: none;
+        text-decoration: none;
+        top: -.5rem;
+        right: 1.5rem;
+        font-size: 5rem;
+        color: currentColor;
+        transition: all .2s;
+
+        @media only screen and (max-width: $custom-media-query-4) {
+            top: -2.4rem;
+            right: 1.2rem;
+        }
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $color-dark;
+        border-bottom: solid $color-dark .2rem;
+        text-shadow: 0 .5rem 1.8rem rgba($color-dark, .5);
+        transform: scale(1.05);
+
+        span {
+            animation: suggestRight 1s linear;
+        }
+    }
+
+    &__close:hover,
+    &__close:focus {
+        color: $color-dark;
+        text-shadow: 0 .5rem 2rem rgba($color-dark, .5);
+        transform: scale(1.1);
+    }
+
+   
+}

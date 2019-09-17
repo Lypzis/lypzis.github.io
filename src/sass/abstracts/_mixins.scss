@@ -1,0 +1,72 @@
+@mixin clearfix { //appends a pseudo element after the element which will then clear the floats
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// make a checkbox or radiobox input "invisible"
+@mixin invisibleElement {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+@mixin buttonIconWhiteToBlack {
+    background: $color-dark;
+    box-shadow: 0 1rem .7rem rgba($color-dark, .4);
+    transform: translateY(-1rem);
+    border: solid .5rem $color-white;
+
+    i {
+        color: $color-white;
+    }
+}
+
+@mixin buttonNameWhiteToBlack {
+    background: $color-dark;
+    color: $color-white;
+    border: solid .2rem transparent;
+    box-shadow: 0 .4rem .2rem rgba($color-dark, .3);
+    transform: translateY(-.2rem);
+}
+
+
+// MEDIA QUERY MANAGER
+/*
+$breakpoint argument choices:
+- phone 
+- tab-port  
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+    // 'rem' fails in media queries, so instead use 'em'
+    @if $breakpoint == phone {
+        // 600px
+        @media only screen and (max-width: 37.5em) { @content };
+    }
+    @if $breakpoint == phone-secondary {
+        // 800px
+        @media only screen and (max-width: 50em) { @content };
+    }
+    @if $breakpoint == tab-port {
+        // 950px;
+        @media only screen and (max-width: 59.375em) { @content };
+    }
+    @if $breakpoint == tab-land {
+        // 1200px;
+        @media only screen and (max-width: 75em) { @content };
+    }
+    @if $breakpoint == big-desktop {
+        // min: from 1800 and beyond
+        // 1800px;
+        @media only screen and (min-width: 112.5em) { @content };
+    }
+}
