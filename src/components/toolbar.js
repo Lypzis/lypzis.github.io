@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '../assets/images/Logo-Transparent.png';
 
-//import sprite from '../../assets/icons/sprite.svg';
+import sprite from '../assets/icons/sprite.svg';
 
 const toolbar = props => {
 
@@ -12,8 +12,9 @@ const toolbar = props => {
             <li key={toolbarLink.name} className="navigation__list-item">
                 <Link to={toolbarLink.route} className="navigation__link">
                     <svg className="nav-icon">
-                        <use xlinkHref={`${'sprite'}#${toolbarLink.icon}`}></use>
-                    </svg> {toolbarLink.name}
+                        <use xlinkHref={`${sprite}#${toolbarLink.icon}`}></use>
+                    </svg> 
+                    <p className="navigation__link-name">{toolbarLink.name}</p>
                 </Link>
             </li>
         );

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import Layout from '../hoc/Layout';
 import Home from './home/Home';
@@ -16,27 +17,24 @@ import reactLogo from '../assets/images/React.png';
 
 class App extends Component {
   state = {
-    logo: { route: '/fake-auction', icon: 'icon-hammer2', name: 'Fake Auctions' },
+    logo: { route: '/' },
     navLinks: [
-      { route: '/fake-auction/auctions', icon: 'icon-hammer2', name: 'auctions' },
-      { route: '/fake-auction', icon: 'icon-cart', name: 'cart' },
-      { route: '/fake-auction', icon: 'icon-envelop', name: 'notifications' },
-      { route: '/fake-auction', icon: 'icon-user', name: 'user' },
+      { route: '/', icon: 'icon-home3', name: 'home' },
+      { route: '/about', icon: 'icon-info', name: 'about' },
+      { route: '/work', icon: 'icon-user-tie', name: 'work' },
+      { route: '/contact', icon: 'icon-mail3', name: 'contact' },
     ]
   }
 
   render() {
     return (
       <Layout logo={this.state.logo} navLinks={this.state.navLinks} >
-        {/*
-        <Home />
-
-        <main>
-          <About />
-          <Work />
-          <Contact />
-        </main>
-        */}
+          <Switch>
+            <Route path="/contact" component={Contact} />
+            <Route path="/work" component={Work} />
+            <Route path="/about" component={About} />
+            <Route path="/" component={Home} />
+          </Switch>
         
 
         <div className="popup" id="popup">

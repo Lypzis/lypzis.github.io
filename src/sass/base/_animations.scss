@@ -60,26 +60,22 @@
 
     70% {
         opacity: 0;
-        left: 50%;
-        transform: translate(-50%, 2rem);
+        transform: translateY(2rem);
     }
 
     80% {
         opacity: .4;
-        left: 50%;
-        transform: translate(-50%, 1rem);
+        transform: translateY(1rem);
     }
 
     90% {
         opacity: .7;
-        left: 50%;
-        transform: translate(-50%, -1rem);
+        transform: translateY(-1rem);
     }
 
     100% {
         opacity: 1;
-        left: 50%;
-        transform: translate(-50%, 0);
+        transform: translateY(0);
     }
 }
 

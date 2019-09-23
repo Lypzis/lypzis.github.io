@@ -7,9 +7,6 @@ class Home extends Component {
     render() {
         return (
             <header className="header">
-                <div className="header__logo-box">
-                    <img src={logo} alt="Logo" className="header__logo" />
-                </div>
 
                 <div className="header__text-box">
                     <div className="heading-primary">
@@ -17,7 +14,7 @@ class Home extends Component {
                             Hello, I'm Victor
                 </h1>
                         <h2 className="heading-primary--sub">
-                            Web Developer &amp; Designer
+                            Developer &amp; Designer
                 </h2>
                     </div>
 

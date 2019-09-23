@@ -1,6 +1,6 @@
 .app-title {
     font-size: 3.7rem;
-    padding: 1.8rem 3rem;
+    padding: 1rem 3rem;
     display: flex;
 }
 
@@ -38,6 +38,10 @@
     display: flex;
     list-style: none;
     height: 100%;
+}
+
+.navigation__link-name {
+    position: relative;
 }
 
 .navigation__list-item {

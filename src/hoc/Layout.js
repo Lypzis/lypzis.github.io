@@ -3,7 +3,7 @@ import React from 'react';
 import Toolbar from '../components/toolbar';
 
 const layout = props => (
-    <React.Fragment>
+    <div className="layout">
         <header className="layout__header">
             <Toolbar
                 logo={props.logo}
@@ -24,7 +24,7 @@ const layout = props => (
                 </a>
             </p>
         </footer>
-    </React.Fragment>
+    </div>
 );
 
 export default layout;
