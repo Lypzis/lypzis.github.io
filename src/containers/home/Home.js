@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import logo from '../../assets/images/Logo-Transparent.png';
-
 class Home extends Component {
 
     render() {

@@ -6,12 +6,8 @@ class About extends Component {
         return (
             <section className="section-about">
                 <div className="about" id="section-about">
-                    <div className="row">
-                        <h3 className="title">
-                            About Myself
-                    </h3>
-                    </div>
-                    <div className="row">
+                    <div className="about__box">
+
                         <figure className="about__picture">
                             <img className="about__picture-photo"
                                 src="https://avatars1.githubusercontent.com/u/32135239?s=460&v=4" alt="dist/img/author.jpg" />
@@ -29,17 +25,7 @@ class About extends Component {
                                 love to make experiments and
                                 learning from them. At my free time, I mostly enjoy playing games(mainly the strategic hard
                                 ones), laughing at memes and watching series.
-                            <br></br>
-                                I began coding in 2015, at University, using Java to make my first "hello world" and starting
-                                my passion for this. Since that, I wanted more and more, started studying a lot at home,
-                                it made me realize how much more effective it was and how boring and unnecessary was
-                                for me to have to go the University, being obligated to "learn" multiple subjects rather than to
-                                focus on what I really like.
-                                Met with Javascript around 2017, on online courses, and for its flexibility and ease to
-                                write, I really liked it, leaving Java in my memory box ...and the University for later completion.
-                                Since then, I have been studying by my own.
-                            <br></br>
-                            </p>
+                        </p>
                             <br></br>
                             <br></br>
                             <div className="about__description-quote-box">
@@ -50,6 +36,7 @@ class About extends Component {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
         );

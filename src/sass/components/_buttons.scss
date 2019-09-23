@@ -86,8 +86,8 @@
         text-decoration: none;
         outline: none;
         font-size: 1.8rem;
-        border: solid .2rem;
-        color: $color-gray;
+        border: solid .2rem #fff;
+        color: #fff;
         border-radius: 1rem;
         padding: .4rem 1rem;
         backface-visibility: hidden;
@@ -95,7 +95,7 @@
 
         &:hover,
         &:focus {
-            @include buttonNameWhiteToBlack;
+            @include buttonNameBlackToWhite;
         }
     }
 

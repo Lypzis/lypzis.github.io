@@ -1,19 +1,7 @@
 .section-about {
-    margin-top: -17vh;
-    padding: 27.5rem 11rem;
     background: $color-gray-light;
-
-    @media only screen and(max-width: $custom-media-query-2) {
-        padding: 27.5rem 8rem;
-     }
-
-    @media only screen and(max-width: $custom-media-query-4) {
-        padding: 27.5rem 4rem;
-     }
-
-    @media only screen and(max-width: $custom-media-query-5) {
-        padding: 30.5rem 4rem;
-     }
+    height: 100%;
+    width: 100%;
 }
 
 .section-work {
