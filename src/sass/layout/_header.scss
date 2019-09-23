@@ -27,9 +27,7 @@
     }
 
     &__logo-box {
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
+        position: relative;
     }
 
     &__logo-box-secondary {
@@ -42,7 +40,10 @@
 
     &__logo {
         opacity: 1;
-        height: 6rem;
+        width: 7rem;
+        border: #fff solid .2rem;
+        border-radius: .3rem;
+        padding: .2rem .6rem;
         transition: all 2s ease-in 3s;
 
         animation: fadeIn 4.5s ease-in;

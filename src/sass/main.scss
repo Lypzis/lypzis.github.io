@@ -8,6 +8,7 @@
 @import './layout/header';
 @import './layout/grid';
 @import './layout/footer';
+@import './layout/layout';
 
 @import './components/buttons';
 @import './components/about';
@@ -15,5 +16,6 @@
 @import './components/inputs';
 @import './components/contact';
 @import './components/popup';
+@import './components/toolbar';
 
 @import './pages/home';

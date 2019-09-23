@@ -1,167 +1,43 @@
 import React, { Component } from 'react';
 
-import logo from './assets/images/Logo-Transparent.png';
-import lypzisPicture from './assets/images/lypzis-picture.jpg';
-import trilloPicture from './assets/images/trillo-picture.jpg';
-import natourPicture from './assets/images/natour-picture.jpg';
-import omnifoodPicture from './assets/images/omnifood-picture.jpg';
-import forkifyPicture from './assets/images/forkify-picture.jpg';
-import mindBlowGif from './assets/images/mind-blowing.gif';
-import reactLogo from './assets/images/React.png';
+import Layout from '../hoc/Layout';
+import Home from './home/Home';
+import About from './about/About';
+import Work from './work/Work';
+import Contact from './contact/Contact';
+
+import lypzisPicture from '../assets/images/lypzis-picture.jpg';
+import trilloPicture from '../assets/images/trillo-picture.jpg';
+import natourPicture from '../assets/images/natour-picture.jpg';
+import omnifoodPicture from '../assets/images/omnifood-picture.jpg';
+import forkifyPicture from '../assets/images/forkify-picture.jpg';
+import mindBlowGif from '../assets/images/mind-blowing.gif';
+import reactLogo from '../assets/images/React.png';
 
 class App extends Component {
+  state = {
+    logo: { route: '/fake-auction', icon: 'icon-hammer2', name: 'Fake Auctions' },
+    navLinks: [
+      { route: '/fake-auction/auctions', icon: 'icon-hammer2', name: 'auctions' },
+      { route: '/fake-auction', icon: 'icon-cart', name: 'cart' },
+      { route: '/fake-auction', icon: 'icon-envelop', name: 'notifications' },
+      { route: '/fake-auction', icon: 'icon-user', name: 'user' },
+    ]
+  }
 
   render() {
     return (
-      <React.Fragment>
-        <header className="header">
-          <div className="header__logo-box">
-            <img src={logo} alt="Logo" className="header__logo" />
-          </div>
-
-          <div className="header__text-box">
-            <div className="heading-primary">
-              <h1 className="heading-primary--main">
-                Hello, I'm Victor
-                </h1>
-              <h2 className="heading-primary--sub">
-                Web Developer &amp; Designer
-                </h2>
-            </div>
-
-            <a href="#section-about" className="button button-animated button__section">Know More</a>
-          </div>
-        </header>
+      <Layout logo={this.state.logo} navLinks={this.state.navLinks} >
+        {/*
+        <Home />
 
         <main>
-          <section className="section-about">
-            <div className="about" id="section-about">
-              <div className="row">
-                <h3 className="title">
-                  About Myself
-                    </h3>
-              </div>
-              <div className="row">
-                <figure className="about__picture">
-                  <img className="about__picture-photo"
-                    src="https://avatars1.githubusercontent.com/u/32135239?s=460&v=4" alt="dist/img/author.jpg" />
-                  <a href="https://twitter.com/Lypzis" target="_blank" rel="noopener noreferrer" className="btn button-name">Victor V.
-                            Piccoli</a>
-                </figure>
-                <div className="about__description">
-                  <p className="text">
-                    I'm Victor, an expert in front-end development helping in the creation of beautiful,
-                    responsive and functional websites. I enjoy shaping simple and yet
-                    effective designs along with a clean, descriptive and well commented code.
-                            <br></br>
-                    I have very diverse and liberal ideas and I'm a geek for technology and innovation, and a
-                    big fan of open source softwares. I also
-                    love to make experiments and
-                    learning from them. At my free time, I mostly enjoy playing games(mainly the strategic hard
-                    ones), laughing at memes and watching series.
-                            <br></br>
-                    I began coding in 2015, at University, using Java to make my first "hello world" and starting
-                    my passion for this. Since that, I wanted more and more, started studying a lot at home,
-                    it made me realize how much more effective it was and how boring and unnecessary was
-                    for me to have to go the University, being obligated to "learn" multiple subjects rather than to
-                    focus on what I really like.
-                    Met with Javascript around 2017, on online courses, and for its flexibility and ease to
-                    write, I really liked it, leaving Java in my memory box ...and the University for later completion.
-                    Since then, I have been studying by my own.
-                            <br></br>
-                  </p>
-                  <br></br>
-                  <br></br>
-                  <div className="about__description-quote-box">
-                    <p className="text quote">
-                      "If you know me based on what I was a year ago, you don't know me anymore. My evolution
-                      is constant. Allow me to introduce myself again".
-                            </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="section-work" id="section-work">
-            <div className="work">
-              <div className="row">
-                <h3 className="title">
-                  My Projects
-                    </h3>
-              </div>
-
-              <div className="row">
-                <div className="work__box-list">
-                  <div className="work__box work__box-1">
-                    <div className="work__box-title">
-                      <h4 className="title-secondary">
-                        Finished
-                                </h4>
-                    </div>
-
-                    <a href="#popup" className="button button-label">
-                      <i className="fas fa-list-alt"></i>
-                    </a>
-                  </div>
-
-                  <div className="work__box work__box-2">
-                    <div className="work__box-title">
-                      <h4 className="title-secondary">
-                        Currently Learning
-                                </h4>
-                    </div>
-
-                    <a href="#popup-2" className="button button-label" htmlFor="myEducation">
-                      <i className="fas fa-book"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="section-contact">
-            <div className="contact">
-              <div className="row">
-                <h3 className="title">
-                  Get in Contact
-                    </h3>
-              </div>
-
-              <div className="row">
-                <div className="contact__box">
-                  <ol className="contact__list">
-                    <li className="contact__list-item">
-                      <i className="fas fa-envelope"></i>
-                      <a href="mailto:victorvp2018@protonmail.com" title="mail to victorvp2018@protonmail.com"
-                        target="_blank" rel="noopener noreferrer" className="btn button-name">victorvp2018@protonmail.com</a>
-                    </li>
-                    <li className="contact__list-item">
-                      <i className="fab fa-twitter"></i>
-                      <a href="https://twitter.com/Lypzis" target="_blank" rel="noopener noreferrer" className="btn button-name">@Lypzis</a>
-                    </li>
-                    <li className="contact__list-item">
-                      <i className="fab fa-facebook-square"></i>
-                      <a href="https://www.facebook.com/Lypzis" target="_blank" rel="noopener noreferrer"
-                        className="btn button-name">&frasl;Lypzis</a>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </section>
+          <About />
+          <Work />
+          <Contact />
         </main>
-
-        <footer className="footer">
-          <p className="text">© 2019 by Lypzis. All rights reserved. </p>
-          <p title="The W3C CSS Validation Service">
-            <a target="_blank" rel="noopener noreferrer"
-              href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flypzis.github.io%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=0&amp;vextwarning=">
-              <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
-            </a>
-          </p>
-        </footer>
+        */}
+        
 
         <div className="popup" id="popup">
           <div className="popup__content">
@@ -317,7 +193,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </Layout>
     );
   }
 }

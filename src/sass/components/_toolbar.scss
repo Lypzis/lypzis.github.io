@@ -1,0 +1,72 @@
+.app-title {
+    font-size: 3.7rem;
+    padding: 1.8rem 3rem;
+    display: flex;
+}
+
+.app-title a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.logo-icon {
+    height: 3.5rem;
+    width: 3.5rem;
+    fill: #fff;
+    margin-right: 1.7rem;
+}
+
+.nav-icon {
+    height: 2.3rem;
+    width: 2.3rem;
+    fill: #fff;
+    margin-right: 1.7rem;
+    transition: all .3s;
+}
+
+.navigation {
+    position: relative;
+}
+
+.navigation__list {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+.navigation__list-item {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__link {
+    text-decoration: none;
+    color: #fff;
+    background: none;
+    font-size: 2.7rem;
+    height: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+
+    transition: all .3s;
+}
+
+.navigation__link:active,
+.navigation__link:focus,
+.navigation__link:hover {
+    color: #000;
+    background: #fff;
+}
+
+.navigation__link:active .nav-icon,
+.navigation__link:focus .nav-icon,
+.navigation__link:hover .nav-icon {
+    fill: #000;
+}
