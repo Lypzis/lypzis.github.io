@@ -8,10 +8,7 @@ import Work from './work/Work';
 import Contact from './contact/Contact';
 
 import lypzisPicture from '../assets/images/lypzis-picture.jpg';
-import trilloPicture from '../assets/images/trillo-picture.jpg';
-import natourPicture from '../assets/images/natour-picture.jpg';
-import omnifoodPicture from '../assets/images/omnifood-picture.jpg';
-import forkifyPicture from '../assets/images/forkify-picture.jpg';
+import evolootPicture from '../assets/images/evoloot-picture.png';
 import mindBlowGif from '../assets/images/mind-blowing.gif';
 import reactLogo from '../assets/images/React.png';
 
@@ -29,19 +26,19 @@ class App extends Component {
   render() {
     return (
       <Layout logo={this.state.logo} navLinks={this.state.navLinks} >
-          <Switch>
-            <Route path="/contact" component={Contact} />
-            <Route path="/work" component={Work} />
-            <Route path="/about" component={About} />
-            <Route path="/" component={Home} />
-          </Switch>
-        
+        <Switch>
+          <Route path="/contact" component={Contact} />
+          <Route path="/work" component={Work} />
+          <Route path="/about" component={About} />
+          <Route path="/" component={Home} />
+        </Switch>
+
 
         <div className="popup" id="popup">
           <div className="popup__content">
             <a href="#section-work" className=" btn button__close">&times;</a>
 
-            <h3 className="title-tertiary">Sass & CSS</h3>
+            <h3 className="title-tertiary">Lypzis.github.io</h3>
             <ol className="popup__list">
 
               <li className="popup__list-item">
@@ -51,8 +48,8 @@ class App extends Component {
                   </figure>
                   <div className="popup__box-description">
                     <p className="text">
-                      This page, I've put all my effort into design it using everything that I've learned so
-                      far about Sass and CSS. It is fully responsive.
+                      This page, I've put all my effort into design it, using most of what I've learned so
+                      far.
                       Have you found the hidden easter eggs?
                             </p>
                     <div className="popup__box-link">
@@ -62,84 +59,23 @@ class App extends Component {
                   </div>
                 </div>
               </li>
-
-              <li className="popup__list-item">
-                <div className="popup__box">
-                  <figure className="popup__box-picture">
-                    <img src={trilloPicture} alt="Trillo Project" className="popup__picture" />
-                  </figure>
-                  <div className="popup__box-description">
-                    <p className="text">
-                      My latest project, a page to search for hotels. I use the power of flexbox to obtain
-                      aligned and well placed elements.
-                            </p>
-                    <div className="popup__box-link">
-                      <a target="_blank" href="https://lypzis.github.io/Sass/Trillo/" rel="noopener noreferrer"
-                        className="btn button__link">view page <span>&rarr;</span></a>
-                      <a target="_blank" href="https://github.com/Lypzis/Sass/tree/master/Trillo" rel="noopener noreferrer"
-                        className="btn button__link">source code <span>&rarr;</span></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="popup__list-item">
-                <div className="popup__box">
-                  <figure className="popup__box-picture">
-                    <img src={natourPicture} alt="Natour Project" className="popup__picture" />
-                  </figure>
-                  <div className="popup__box-description">
-                    <p className="text">
-                      A travel agency's website. Here some early (and some in experimental) CSS resources are in
-                      place.
-                            </p>
-                    <div className="popup__box-link">
-                      <a target="_blank" href="https://lypzis.github.io/Sass/Natour/" rel="noopener noreferrer"
-                        className="btn button__link">view page <span>&rarr;</span></a>
-                      <a target="_blank" href="https://github.com/Lypzis/Sass/tree/master/Natour" rel="noopener noreferrer"
-                        className="btn button__link">source code <span>&rarr;</span></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="popup__list-item">
-                <div className="popup__box">
-                  <figure className="popup__box-picture">
-                    <img src={omnifoodPicture} alt="Omnifood Project" className="popup__picture" />
-                  </figure>
-                  <div className="popup__box-description">
-                    <p className="text">
-                      A restaurant's page and also my introduction to some sofisticated use of CSS, it uses
-                      Jquery to help with some of the effects.
-                            </p>
-                    <div className="popup__box-link">
-                      <a target="_blank" href="https://lypzis.github.io/Html-Css/Omnifood/" rel="noopener noreferrer"
-                        className="btn button__link">view page <span>&rarr;</span></a>
-                      <a target="_blank" href="https://github.com/Lypzis/Html-Css/tree/master/Omnifood" rel="noopener noreferrer"
-                        className="btn button__link">source code <span>&rarr;</span></a>
-                    </div>
-                  </div>
-                </div>
-              </li>
             </ol>
 
-            <h3 className="title-tertiary">Javascript&emsp;/&emsp;ES6</h3>
+            <h3 className="title-tertiary">Evoloot</h3>
             <ol className="popup__list">
 
               <li className="popup__list-item">
                 <div className="popup__box">
                   <figure className="popup__box-picture">
-                    <img src={forkifyPicture} alt="Forkify Project" className="popup__picture" />
+                    <img src={evolootPicture} alt="Evoloot Project" className="popup__picture" />
                   </figure>
                   <div className="popup__box-description">
                     <p className="text">
-                      A recipes' page. In here I use ES6 to handle all the functionality of the website. It
-                      does need some polishment, so I'll be adding updates in the near future.
+                      A gamified business world, it's currently in prototype version.
                             </p>
                     <div className="popup__box-link">
-                      <a target="_blank" href="https://lypzis.github.io/Javascript/forkify/dist/" rel="noopener noreferrer"
+                      <a target="_blank" href="https://evoloot.github.io/evolootApp/" rel="noopener noreferrer"
                         className="btn button__link">view page <span>&rarr;</span></a>
-                      <a target="_blank" href="https://github.com/Lypzis/Javascript/tree/master/forkify" rel="noopener noreferrer"
-                        className="btn button__link">source code <span>&rarr;</span></a>
                     </div>
                   </div>
                 </div>
@@ -157,7 +93,7 @@ class App extends Component {
                   <div className="popup__box-description">
                     <p className="text">
                       Many of my projects that are experimental, old, can't display or did not
-                      have time to finish are all safe on repositories
+                      have time to finish are all safe on my repositories
                       waiting for resurrection or purpose. They will be on the hightlights again one day.
                             </p>
                     <div className="popup__box-link">
@@ -174,18 +110,18 @@ class App extends Component {
         <div className="popup" id="popup-2">
           <div className="popup__content  popup__content--small">
             <a href="#section-work" className=" btn button__close">&times;</a>
-            <h3 className="title-tertiary">React</h3>
+            <h3 className="title-tertiary">React-Redux</h3>
             <div className="popup__box popup__box--no-border-bottom">
               <figure className="popup__box-picture">
                 <img src={reactLogo} alt="React Logo" className="popup__picture" />
               </figure>
               <div className="popup__box-description">
                 <p className="text">
-                  Introduction to React, a framework for creating dynamic components based UIs
+                  A global data storage for React applications.
                     </p>
                 <div className="popup__box-link">
-                  <a target="_blank" rel="noopener noreferrer" href="https://lypzis.github.io/React/" className="btn button__link">view page <span>&rarr;</span></a>
-                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/Lypzis/React/tree/master/react-complete-guide" className="btn button__link">source code <span>&rarr;</span></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://lypzis.github.io/redux-react/" className="btn button__link">view page <span>&rarr;</span></a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/Lypzis/redux-react" className="btn button__link">source code <span>&rarr;</span></a>
                 </div>
               </div>
             </div>

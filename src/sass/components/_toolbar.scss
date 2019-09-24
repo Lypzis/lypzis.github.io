@@ -28,6 +28,10 @@
     fill: #fff;
     margin-right: 1.7rem;
     transition: all .3s;
+
+    @media only screen and(max-width: $custom-media-query-2) {
+        margin-right: 0;
+     }
 }
 
 .navigation {
@@ -42,6 +46,10 @@
 
 .navigation__link-name {
     position: relative;
+
+    @media only screen and(max-width: $custom-media-query-2) {
+       display: none;
+     }
 }
 
 .navigation__list-item {

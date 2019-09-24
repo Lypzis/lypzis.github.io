@@ -12,7 +12,6 @@ html {
 
     @include respond(tab-land) {
         font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
-        padding: 0; 
     }
 
     @include respond(tab-port) {

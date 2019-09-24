@@ -13,6 +13,12 @@
         }
     }
 
+    &__nav-icon {
+        fill: $color-gray;
+        height: 15rem;
+        width: 15rem;
+    }
+
     &__box {
         position: relative;
         display: flex;
@@ -48,6 +54,10 @@
 
     &__box-list &__box:hover .button-label {
         @include buttonIconWhiteToBlack;
+        
+        .work__nav-icon {
+            fill: #fff;
+        }
     }
     /*
     .input__invisible:focus + .button-label {

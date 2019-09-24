@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
 
@@ -16,7 +17,7 @@ class Home extends Component {
                 </h2>
                     </div>
 
-                    <a href="#section-about" className="button button-animated button__section">Know More</a>
+                    <Link to="/about" className="button button-animated button__section">Know More</Link>
                 </div>
             </header>
         );

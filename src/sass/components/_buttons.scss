@@ -63,6 +63,8 @@
         border: solid .5rem transparent;
         text-align: center;
         transition: all .5s;
+        padding: 3rem 7rem;
+        display: flex;
 
         &-logo {
             width: 100%;
@@ -78,6 +80,9 @@
 
         &:focus {
             @include buttonIconWhiteToBlack;
+            .work__nav-icon {
+                fill: #fff;
+            }
         }
     }
 

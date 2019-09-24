@@ -16,15 +16,14 @@ class About extends Component {
                         </figure>
                         <div className="about__description">
                             <p className="text">
-                                I'm Victor, an expert in front-end development helping in the creation of beautiful,
-                                responsive and functional websites. I enjoy shaping simple and yet
+                                I'm an expert in front-end development helping in the creation of beautiful,
+                                responsive and functional applications. I enjoy shaping simple and
                                 effective designs along with a clean, descriptive and well commented code.
                             <br></br>
-                                I have very diverse and liberal ideas and I'm a geek for technology and innovation, and a
-                                big fan of open source softwares. I also
+                                I have very diverse and libertarian ideals. I have a big appreciation for technology and innovation and I'm a
+                                big fan of open source software. I also
                                 love to make experiments and
-                                learning from them. At my free time, I mostly enjoy playing games(mainly the strategic hard
-                                ones), laughing at memes and watching series.
+                                learning from them. At my free time, I mostly enjoy playing games, laughing at memes and watching series.
                         </p>
                             <br></br>
                             <br></br>

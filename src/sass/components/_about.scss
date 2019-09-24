@@ -46,6 +46,10 @@
     &__box {
         position: relative;
         max-width: 80rem;
+
+        @media only screen and(max-width: $custom-media-query-2) {
+           padding: 4rem;
+        }
     }
 
     &__picture {
