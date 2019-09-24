@@ -16,7 +16,7 @@ class About extends Component {
                         </figure>
                         <div className="about__description">
                             <p className="text">
-                                I'm an expert in front-end development helping in the creation of beautiful,
+                                An expert in front-end development helping in the creation of beautiful,
                                 responsive and functional applications. I enjoy shaping simple and
                                 effective designs along with a clean, descriptive and well commented code.
                             <br></br>
