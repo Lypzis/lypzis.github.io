@@ -1,8 +1,7 @@
 .contact {
     color: $color-gray;
-    height: 50vh;
-    margin-top: 4rem;
 
+    /*
     @include respond(phone) {
         height: 40vh;
     }
@@ -10,6 +9,7 @@
     @media only screen and(max-width: $custom-media-query-5) {
         height: 30vh;
      }
+     */
 
     &__box {
         display: flex;
@@ -21,10 +21,30 @@
         flex-direction: column;
     }
 
+    &__nav-icon {
+        height: 4.5rem;
+        width: 4.5rem;
+        fill: #fff;
+        transition: all .4s;
+    }
+
     &__list-item {
         display: inherit;
         align-items: center;
         text-align: center;
+        color: #fff;
+
+        &:first-child {
+            animation: moveInLeft 1.5s ease-out;
+        }
+
+        &:nth-child(2) {
+            animation: fadeInRight 3s ease-out;
+        }
+
+        &:last-child {
+            animation: fadeInBottom 4s ease-out;
+        }
         
         i {
             font-size: 4.5rem;
@@ -45,24 +65,24 @@
             margin-bottom: 4rem;
         }
 
-        &:hover i {
+        &:hover .contact__nav-icon {
             transform: scale(1.4);
         }
 
-        &:hover .fa-envelope {
-            color: #9498c8;
+        &:hover .mail {
+            fill: #9498c8;
         }
 
-        &:hover .fa-twitter {
-            color: #55acee;
+        &:hover .twitter {
+            fill: #55acee;
         }
 
-        &:hover .fa-facebook-square {
-            color: #3b5999;
+        &:hover .facebook {
+            fill: #3b5999;
         }
 
         &:hover a {
-            @include buttonNameWhiteToBlack;
+            @include buttonNameBlackToWhite;
         }
     }
 }

@@ -2,15 +2,45 @@
     background: $color-gray-light;
     height: 100%;
     width: 100%;
+    background-image: linear-gradient(to bottom, rgba($color-dark, .3), rgba($color-dark, .95)), url(../../assets/images/theOne.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    //-webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh);  
+    //clip-path: polygon(0px 0px, 100% 0px, 100% 90vh, 50% 100%, 0px 90vh); 
 }
 
 .section-work {
-    padding: 0;
-    margin-top: -20vh;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba($color-dark, .2), rgba($color-dark, .95)), url(../../assets/images/OpenBook-small.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //-webkit-clip-path: polygon(0px 0px, 50% 5vh, 100% 0px, 100% 95vh, 50% 100%, 0px 95vh);
+    //clip-path: polygon(0 0, 50% 5vh, 100% 0, 100% 95vh, 50% 100%, 0 95vh);
+
+    // dpi = dots per inch, if resolutions is higher than 192dpi AND width higher than 600px OR 2000px, use this background-image instead.
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), // for safari
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(to bottom, rgba($color-dark, .2),
+                rgba($color-dark, .95)), 
+                url(../../assets/images/OpenBook.jpg);
+    }
 }
 
 .section-contact {
-    padding: 12rem 0;
-    margin-top: -5vh;
     background: $color-gray-light;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba($color-dark, .2), rgba($color-dark, .95)), url(../../assets/images/phone.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

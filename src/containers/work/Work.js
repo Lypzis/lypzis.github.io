@@ -6,13 +6,7 @@ class Work extends Component {
         return (
             <section className="section-work" id="section-work">
             <div className="work">
-              <div className="row">
-                <h3 className="title">
-                  My Projects
-                    </h3>
-              </div>
-
-              <div className="row">
+              
                 <div className="work__box-list">
                   <div className="work__box work__box-1">
                     <div className="work__box-title">
@@ -39,7 +33,7 @@ class Work extends Component {
                   </div>
                 </div>
               </div>
-            </div>
+
           </section>
         );
     }
