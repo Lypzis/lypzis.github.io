@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "573acf204f6ee3a59331090beee0b52d",
+    "revision": "dac875dd93b269158880ea86fb1e5c94",
     "url": "/index.html"
   },
   {
-    "revision": "9e551a3668e78638b4da",
+    "revision": "97abf7492af164b8eb1e",
     "url": "/static/css/main.07775b29.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.871e62f8.chunk.js"
   },
   {
-    "revision": "9e551a3668e78638b4da",
-    "url": "/static/js/main.240c7fdd.chunk.js"
+    "revision": "97abf7492af164b8eb1e",
+    "url": "/static/js/main.2888fd0f.chunk.js"
   },
   {
     "revision": "c795ac605943c5840b47",
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/React.127b470a.png"
   },
   {
-    "revision": "7233fb0a0af7439dd7123d94fca15a00",
-    "url": "/static/media/evoloot-picture.7233fb0a.png"
+    "revision": "6923c93685068968053385d4fa2ebdcc",
+    "url": "/static/media/evoloot-picture.6923c936.png"
   },
   {
     "revision": "06d976e78d79e260cd3a686188e2e873",
