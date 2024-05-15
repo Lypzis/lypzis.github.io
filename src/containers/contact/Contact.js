@@ -15,21 +15,8 @@ class Contact extends Component {
                 <svg className="contact__nav-icon mail">
                   <use xlinkHref={`${sprite}#icon-mail3`}></use>
                 </svg>
-                <a href="mailto:victorvp2018@protonmail.com" title="mail to victorvp2018@protonmail.com"
-                  target="_blank" rel="noopener noreferrer" className="btn button-name">victorvp2018@protonmail.com</a>
-              </li>
-              <li className="contact__list-item">
-                <svg className="contact__nav-icon twitter">
-                  <use xlinkHref={`${sprite}#icon-twitter`}></use>
-                </svg>
-                <a href="https://twitter.com/Lypzis" target="_blank" rel="noopener noreferrer" className="btn button-name">@Lypzis</a>
-              </li>
-              <li className="contact__list-item">
-                <svg className="contact__nav-icon facebook">
-                  <use xlinkHref={`${sprite}#icon-facebook2`}></use>
-                </svg>
-                <a href="https://www.facebook.com/Lypzis" target="_blank" rel="noopener noreferrer"
-                  className="btn button-name">&frasl;Lypzis</a>
+                <a href="mailto:victor.piccoli@pm.me" title="mail to victor.piccoli@pm.me"
+                  target="_blank" rel="noopener noreferrer" className="btn button-name">victor.piccoli@pm.me</a>
               </li>
             </ol>
           </div>

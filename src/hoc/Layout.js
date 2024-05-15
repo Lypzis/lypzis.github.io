@@ -16,10 +16,10 @@ const layout = props => (
 
         <footer className="layout__footer">
             <p>&emsp;</p>
-            © 2019 by Lypzis. All rights reserved.
+            © 2024 by Lypzis. All rights reserved.
                     <p className="layout__footer-badge" title="The W3C CSS Validation Service">
                 <a target="_blank" rel="noopener noreferrer"
-                    href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flypzis.github.io%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=0&amp;vextwarning=">
+                    href="http://jigsaw.w3.org/css-validator/validator?uri=https://lypzistech.pro&amp;profile=css3svg&amp;usermedium=all&amp;warning=0&amp;vextwarning=">
                     <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
                 </a>
             </p>

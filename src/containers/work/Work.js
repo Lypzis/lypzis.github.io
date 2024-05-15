@@ -13,7 +13,7 @@ class Work extends Component {
             <div className="work__box work__box-1">
               <div className="work__box-title">
                 <h4 className="title-secondary">
-                  Finished Projects
+                  Showcase Projects
                                 </h4>
               </div>
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Layout from "../hoc/Layout";
 import Home from "./home/Home";
@@ -26,7 +26,7 @@ class App extends Component {
   };
 
   render() {
-    const maintenance = true;
+    const maintenance = false;
 
     if (maintenance)
       return (
@@ -43,12 +43,12 @@ class App extends Component {
 
     return (
       <Layout logo={this.state.logo} navLinks={this.state.navLinks}>
-        <Switch>
-          <Route path="/contact" component={Contact} />
-          <Route path="/work" component={Work} />
-          <Route path="/about" component={About} />
-          <Route path="/" component={Home} />
-        </Switch>
+        <Routes>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/work" element={<Work />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/" element={<Home />}/>
+        </Routes>
 
         <div className="popup" id="popup">
           <div className="popup__content">

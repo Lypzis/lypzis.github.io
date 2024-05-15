@@ -13,7 +13,7 @@ class Home extends Component {
                             Hello, I'm Victor
                 </h1>
                         <h2 className="heading-primary--sub">
-                            Developer &amp; Designer
+                            Software Developer
                 </h2>
                     </div>
 

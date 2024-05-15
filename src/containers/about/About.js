@@ -11,7 +11,7 @@ class About extends Component {
                         <figure className="about__picture">
                             <img className="about__picture-photo"
                                 src="https://avatars1.githubusercontent.com/u/32135239?s=460&v=4" alt="dist/img/author.jpg" />
-                            <a href="https://twitter.com/Lypzis" target="_blank" rel="noopener noreferrer" className="btn button-name">Victor V.
+                            <a href="https://www.linkedin.com/in/victor-piccoli-2490381a6/" target="_blank" rel="noopener noreferrer" className="btn button-name">Victor V.
                             Piccoli</a>
                         </figure>
                         <div className="about__description">
