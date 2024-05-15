@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a06ddd6.chunk.css",
-    "main.js": "/static/js/main.dcc9bfeb.chunk.js",
-    "main.js.map": "/static/js/main.dcc9bfeb.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.5fa49e70.js",
-    "runtime~main.js.map": "/static/js/runtime~main.5fa49e70.js.map",
-    "static/js/2.160f346b.chunk.js": "/static/js/2.160f346b.chunk.js",
-    "static/js/2.160f346b.chunk.js.map": "/static/js/2.160f346b.chunk.js.map",
+    "main.css": "/static/css/main.0c5e9da3.css",
+    "main.js": "/static/js/main.8772c85a.js",
+    "static/media/mind-blowing.gif": "/static/media/mind-blowing.c1345fa26cb9ff4a3f30.gif",
+    "static/media/theOne.jpg": "/static/media/theOne.54b7861596ced6aa31e4.jpg",
+    "static/media/Castle-bg.jpg": "/static/media/Castle-bg.d663187d7723cd3a31fb.jpg",
+    "static/media/lypzis-picture.jpg": "/static/media/lypzis-picture.7818ede7b6923607dbac.jpg",
+    "static/media/phone.jpg": "/static/media/phone.cdff109214bbd973dad9.jpg",
+    "static/media/OpenBook.jpg": "/static/media/OpenBook.4cccaddd2efccf87a249.jpg",
+    "static/media/Castle-bg-small.jpg": "/static/media/Castle-bg-small.007acc44838c148d628f.jpg",
+    "static/media/evoloot-picture.png": "/static/media/evoloot-picture.b02f7c95a307ec124853.png",
+    "static/media/phone-small.jpg": "/static/media/phone-small.9dca3dace73e100bc574.jpg",
+    "static/media/OpenBook-small.jpg": "/static/media/OpenBook-small.286bc3bf7bdc285de13c.jpg",
+    "static/media/theOne-small.jpg": "/static/media/theOne-small.9b2a4e96f1556dd9cc79.jpg",
+    "static/media/React.png": "/static/media/React.f9736c852ee8df4ede69.png",
+    "static/media/sprite.svg": "/static/media/sprite.153b49682aef0b615557fdcf9ee842e8.svg",
+    "static/media/sprite2.svg": "/static/media/sprite2.18b3e3101821fdc1d10ef10b1e56d162.svg",
     "index.html": "/index.html",
-    "precache-manifest.273277b0e099019d37960b493f13f4e6.js": "/precache-manifest.273277b0e099019d37960b493f13f4e6.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.6a06ddd6.chunk.css.map": "/static/css/main.6a06ddd6.chunk.css.map",
-    "static/media/main.scss": "/static/media/theOne.648d0b22.jpg",
-    "static/media/React.png": "/static/media/React.127b470a.png",
-    "static/media/evoloot-picture.png": "/static/media/evoloot-picture.6923c936.png",
-    "static/media/lypzis-picture.jpg": "/static/media/lypzis-picture.06d976e7.jpg",
-    "static/media/mind-blowing.gif": "/static/media/mind-blowing.a6c92868.gif",
-    "static/media/sprite.svg": "/static/media/sprite.51bf9a98.svg",
-    "static/media/sprite2.svg": "/static/media/sprite2.f0408482.svg"
-  }
+    "main.0c5e9da3.css.map": "/static/css/main.0c5e9da3.css.map",
+    "main.8772c85a.js.map": "/static/js/main.8772c85a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c5e9da3.css",
+    "static/js/main.8772c85a.js"
+  ]
 }
