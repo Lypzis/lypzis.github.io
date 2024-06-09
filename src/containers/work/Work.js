@@ -13,8 +13,8 @@ class Work extends Component {
             <div className="work__box work__box-1">
               <div className="work__box-title">
                 <h4 className="title-secondary">
-                  Showcase Projects
-                                </h4>
+                  Career Timeline
+                </h4>
               </div>
 
               <a href="#popup" className="button button-label">
@@ -30,8 +30,8 @@ class Work extends Component {
             <div className="work__box work__box-2">
               <div className="work__box-title">
                 <h4 className="title-secondary">
-                  Currently Learning
-                                </h4>
+                  Latest Skill Showcase
+                </h4>
               </div>
 
               <a href="#popup-2" className="button button-label" htmlFor="myEducation">

@@ -11,27 +11,22 @@ class About extends Component {
                         <figure className="about__picture">
                             <img className="about__picture-photo"
                                 src="https://avatars1.githubusercontent.com/u/32135239?s=460&v=4" alt="dist/img/author.jpg" />
-                            <a href="https://www.linkedin.com/in/victor-piccoli-2490381a6/" target="_blank" rel="noopener noreferrer" className="btn button-name">Victor V.
+                            <a href="https://github.com/Lypzis" target="_blank" rel="noopener noreferrer" className="btn button-name">Victor V.
                             Piccoli</a>
                         </figure>
                         <div className="about__description">
                             <p className="text">
-                                An expert in front-end development helping in the creation of beautiful,
-                                responsive and functional applications. I enjoy shaping simple and
-                                effective designs along with a clean, descriptive and well commented code.
+                                I am an expert in software development with a strong focus on creating beautiful, responsive, and functional applications. My passion lies in crafting simple and effective designs, paired with clean, descriptive, and well-commented code.
                             <br></br>
-                                I have very diverse and libertarian ideals. I have a big appreciation for technology and innovation and I'm a
-                                big fan of open source software. I also
-                                love to make experiments and
-                                learning from them. At my free time, I mostly enjoy playing games, laughing at memes and watching series.
-                        </p>
+                                I hold strong libertarian ideals and have a deep appreciation for technology and innovation. As a big supporter of open-source software, I am constantly experimenting and learning from my projects. In my free time, I enjoy playing games, exploring new memes, and watching series.
+                            </p>
+
                             <br></br>
                             <br></br>
                             <div className="about__description-quote-box">
                                 <p className="text quote">
-                                    "If you know me based on what I was a year ago, you don't know me anymore. My evolution
-                                    is constant. Allow me to introduce myself again".
-                            </p>
+                                    "If you know me based on who I was a year ago, you don't know me anymore. My evolution is constant. Allow me to introduce myself anew."
+                                </p>
                             </div>
                         </div>
                     </div>
