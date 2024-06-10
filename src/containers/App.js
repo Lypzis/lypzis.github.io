@@ -221,6 +221,12 @@ class App extends Component {
               <div className="popup__box-description">
                 <p className="text">
                   Created in <strong>OutSystems</strong>, makes the usage of MongoDB to store and retrieve data about tours, perform authentication and payments with Stripe API.
+                  <br></br>
+                  Note: You can't sign up &#128542;... but here is a user for you &#128526;: 
+                  <br></br>
+                  user: tester02@example.io 
+                  <br></br>
+                  password: 1234pass
                 </p>
                 <div className="popup__box-link">
                   <span>&nbsp;</span>
